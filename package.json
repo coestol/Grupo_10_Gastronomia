@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "name": "grupo_10_gastronomia",
+  "description": "Descripción productos:\r E-commerce focalizado en la venta de equipamiento gastronómico.\r Ej: Sartenes, cocina, horno, cubiertos entre otros materiales que se encuentren en una cocina.\r Este emprendimiento apunta tanto a los usuarios finales como a revendedores o restaurantes.",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coestol/Grupo_10_Gastronomia.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coestol/Grupo_10_Gastronomia/issues"
+  },
+  "homepage": "https://github.com/coestol/Grupo_10_Gastronomia#readme"
+}
