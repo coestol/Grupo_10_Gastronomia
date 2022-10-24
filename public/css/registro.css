@@ -1,3 +1,128 @@
-.fondoRegistro {
-    background-color: aqua;
+* {
+    font-size: '12px';
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.site ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.hrefStyle {
+    color:black;
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 0;
+    font-size: 17px;
+}
+@media (max-width: 768px) {
+    .logo {
+        width: 15%;
+        height: 5%;
+    }
+    .header-top {
+        background-color: #8A8383;
+        width: 100%;
+        display: flex;
+    }
+    .cont-barra-busqueda {
+        width: 85%;
+        margin: auto;
+    }
+    .barra-busqueda {
+        background-color: #D9D9D9;
+        justify-content: center;
+        width: 80%;
+        margin: auto;
+        display: flex;
+    }
+    .site {
+        display: none;
+    }
+    section.burger-menu{
+        width: 15%;
+        height: 50%;
+        margin-top: 5%;
+        margin: auto;
+
+    }
+    section.burger-menu i {
+        padding:35%;
+        color:white;
+    }
+}
+@media (min-width: 768px) {
+    .logo {
+        width: 15%;
+        height: 90px;
+    }
+    .header-top {
+        background-color: #8A8383;
+        width: 100%;
+        display: flex;
+    }
+    .cont-barra-busqueda {
+        width: 85%;
+        margin: auto;
+    }
+    .barra-busqueda {
+        background-color: #D9D9D9;
+        justify-content: center;
+        width: 80%;
+        margin: auto;
+        display: flex;
+    }
+    section.burger-menu{
+        display: none;
+    }
+    .site {
+        display: flex;
+        background-color: #D9D9D9;
+    }
+    .left-nabvar li{
+        margin-right: 25%;
+        background-color: #534E4E;
+        height: 80%;
+    }
+    .rigth-nabvar li{
+        background-color: #534E4E;
+        width: 100%;
+        margin-left: 50%;
+    }
+    .site ul {
+        display: flex;
+        margin: auto;
+    }
+}
+@media (min-width: 1200px) {
+    body {
+        background-color:aqua;
+    }
+    .logo {
+        width: 10%;
+        height: 90px;
+    }
+    .main-header {
+        border: solid 1px blue;
+    }
+    .header-top {
+        background-color: #8A8383;
+        width: 100%;
+        display: flex;
+    }
+    .cont-barra-busqueda {
+        width: 85%;
+        margin: auto;
+    }
+    .barra-busqueda {
+        background-color: #D9D9D9;
+        justify-content: center;
+        width: 80%;
+        margin: auto;
+        display: flex;
+    }
+    .site {
+        display: flex;
+    }
 }
