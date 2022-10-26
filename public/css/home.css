@@ -1,4 +1,4 @@
-* {
+*{
     font-size: '12px';
     margin: 0px;
     padding: 0px;
@@ -16,6 +16,52 @@
     padding: 5px 0;
     font-size: 17px;
 }
+
+
+section.banner img{
+    width: 100%;
+}
+
+main section article{
+    background-color: #fff;    
+    margin: 10px 0px;
+}
+
+main section article img{
+    width: 100%;
+}
+
+main section article i,
+.discount{
+    color: #39b54a;
+}
+
+main section article i{
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+}
+
+main section h3{
+    margin: 20px 0px;
+}
+
+article div.main-article{
+    width: 100%;
+    border-top: 1px solid #ebebeb;
+    padding: 15px;
+}
+
+
+
+
+
+
+
 @media (max-width: 768px) {
     .logo {
         width: 15%;
@@ -96,9 +142,12 @@
     }
 }
 @media (min-width: 1200px) {
-    .logo {
+        .logo {
         width: 10%;
         height: 90px;
+    }
+    .main-header {
+        border: solid 1px blue;
     }
     .header-top {
         background-color: #8A8383;

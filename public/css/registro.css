@@ -16,6 +16,12 @@
     padding: 5px 0;
     font-size: 17px;
 }
+
+
+section.banner img{
+    width: 100%;
+}
+
 @media (max-width: 768px) {
     .logo {
         width: 15%;
@@ -96,10 +102,7 @@
     }
 }
 @media (min-width: 1200px) {
-    body {
-        background-color:aqua;
-    }
-    .logo {
+        .logo {
         width: 10%;
         height: 90px;
     }
