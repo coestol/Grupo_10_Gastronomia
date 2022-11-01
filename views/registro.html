@@ -38,6 +38,27 @@
         </nav>
     </header>
     <main>
+        <form action="/" method="GET">
+
+            <p><input type="text" id="name" name="name" placeholder="Nombre y apellido"></p> 
+
+            <p><input type="text" id="username" name="username" placeholder="Nombre de usuario"></p> 
+
+            <p><input type="email" id="email" name="email" placeholder="E-mail"></p> 
+
+            <p><label for=""><strong>Fecha de Nacimiento</strong></label></p>   
+            <p><input type="date" id="fechaDeNacimiento" name="fechaDeNacimiento"></p> 
+    
+            <p><label for=""><strong>Elegí tu foto de usuario</strong></label></p>
+            <input type="file" name="foto" value="fotoDeUsuario">
+
+            <p><input type="password" id="contraseña" name="contraseña" placeholder="Elegí tu contraseña"></p>
+            <p><input type="password" id="contraseña" name="contraseña" placeholder="Confirmá tu contraseña"></p>
+
+            <p><button type="submit">Enviar</button>
+            <button id="reset-button" type="reset">Borrar</button>
+            </p>
+        </form>
     </main>
 
 </body>

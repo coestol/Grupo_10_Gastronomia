@@ -4,6 +4,13 @@
     padding: 0px;
     box-sizing: border-box;
 }
+#finalizar{
+color: aqua;
+}
+#finalizar:hover{
+    color: #534E4E;
+
+}
 .site ul {
     list-style: none;
     margin: 0;
