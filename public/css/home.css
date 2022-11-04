@@ -68,7 +68,7 @@ align-items: center;
     width: 224px;
     height: 224px;
     margin: 10px;
-    padding: 2px;
+    padding: 2px; 
   
 }
 
@@ -124,19 +124,19 @@ main section article i{
 
 .footer-data i {
     color: var(--light-blue);
-    font-size: 2em;
+    font-size: 16px;
     padding: 5px 0;
 }
 
 .footer-data h2 {
     color: var(--gray);
-    font-size: 1.5em;
+    font-size: 13px;
     font-weight: 300;
 }
 
 .footer-data p {
     color: var(--gray);
-    font-size: 1em;
+    font-size: 10px;
     font-weight: 200;
 }
 

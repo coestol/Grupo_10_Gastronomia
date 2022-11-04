@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/css/registro.css">
     <link rel="icon" href="images/bellaVista.ico">
 </head>
-<body>
+<body> 
     <header class="main-header">
         <section class="header-top">
             <img class="logo" src="images/bellaVista.ico" alt="logo">
@@ -37,29 +37,69 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <form action="/" method="GET">
-
+    <main class="main">
+        <form action="/" method="GET" class="contForm">    
+            <br/>
+            <p><label for=""><strong>Nombre y apellido</strong></label></p>   
             <p><input type="text" id="name" name="name" placeholder="Nombre y apellido"></p> 
-
+            <br/>
+            <p><label for=""><strong>Nombre de usuario</strong></label></p>   
             <p><input type="text" id="username" name="username" placeholder="Nombre de usuario"></p> 
-
+            <br/>
+            <p><label for=""><strong>Email</strong></label></p>   
             <p><input type="email" id="email" name="email" placeholder="E-mail"></p> 
-
+            <br/>
             <p><label for=""><strong>Fecha de Nacimiento</strong></label></p>   
             <p><input type="date" id="fechaDeNacimiento" name="fechaDeNacimiento"></p> 
-    
-            <p><label for=""><strong>Elegí tu foto de usuario</strong></label></p>
-            <input type="file" name="foto" value="fotoDeUsuario">
-
+            <br/>
+            <p><label for=""><strong>Elegí tu contraseña</strong></label></p>   
             <p><input type="password" id="contraseña" name="contraseña" placeholder="Elegí tu contraseña"></p>
+            <br/>
+            <p><label for=""><strong>Confirmá tu contraseña</strong></label></p>   
             <p><input type="password" id="contraseña" name="contraseña" placeholder="Confirmá tu contraseña"></p>
-
+            <br/>
             <p><button type="submit">Confirmar</button>
-            <button id="reset-button" type="reset">Borrar</button>
+            <button type="submit">Volver</button>
             </p>
         </form>
     </main>
+    <footer class="main-footer">
 
+        <div class="container">
+            <div class="row">
+    
+                <div class="col-12 col-md-4">
+                    <article class="footer-data">
+                        <i class="fas fa-credit-card"></i>
+                        <h2>Pagá con tarjeta o en efectivo</h2>
+                        <p>Lorem Ipsum is simply dummy text of the 
+                            printing and typesetting industry.</p>
+                    </article>
+                </div>
+    
+                <div class="col-12 col-md-4">
+                    <article class="footer-data">
+                        <i class="fas fa-gift"></i>
+                        <h2>Envío gratis desde $ 1.999</h2>
+                        
+                        <p>Lorem Ipsum is simply dummy text of the 
+                            printing and typesetting industry. </p>
+                    </article>
+    
+                </div>
+    
+                <div class="col-12 col-md-4">
+                    <article class="footer-data">
+                        <i class="fas fa-user-shield"></i>
+                        <h2>Seguridad, de principio a fin</h2>
+                        <p>Lorem Ipsum is simply dummy text of the 
+                            printing and typesetting industry.</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+        <h4>Lorem Ipsum is simply dummy text of the 
+            printing and typesetting industry</h4>
+    </footer>
 </body>
 </html> 

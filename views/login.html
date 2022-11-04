@@ -6,10 +6,10 @@
     <title>Gastronomia Bella Vista</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         rel="stylesheet" />
-    <link rel="stylesheet" href="/css/registro.css">
+    <link rel="stylesheet" href="/css/login.css">
     <link rel="icon" href="images/bellaVista.ico">
 </head>
-<body>
+<body> 
     <header class="main-header">
         <section class="header-top">
             <img class="logo" src="images/bellaVista.ico" alt="logo">
@@ -37,15 +37,59 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <form action="/" method="GET">
-
+    <main class="main">
+        <form action="/" method="GET" class="mainForm"> 
+            <br/>
+            <p><label for=""><strong>Nombre de usuario</strong></label></p>   
+            <br/>
             <p><input type="text" name="username" id="username" placeholder="Nombre de usuario"></p>
-            <p><input type="password" name="contraseña" id="contraseña" placeholder="Elegí tu contraseña"> 
-            <button type="submit">Iniciar Sesion</button>
+            <br/>
+            <p><label for=""><strong>Ingresá tu contraseña</strong></label></p>   
+            <br/>
+            <p><input type="password" name="contraseña" id="contraseña" placeholder="Ingresá tu contraseña"> 
+            <br/>
+            <br/>
+            <button type="submit">Iniciar Sesión</button>
             </p>
         </form>
     </main>
+    <footer class="main-footer">
 
+        <div class="container">
+            <div class="row">
+    
+                <div class="col-12 col-md-4">
+                    <article class="footer-data">
+                        <i class="fas fa-credit-card"></i>
+                        <h2>Pagá con tarjeta o en efectivo</h2>
+                        <p>Lorem Ipsum is simply dummy text of the 
+                            printing and typesetting industry.</p>
+                    </article>
+                </div>
+    
+                <div class="col-12 col-md-4">
+                    <article class="footer-data">
+                        <i class="fas fa-gift"></i>
+                        <h2>Envío gratis desde $ 1.999</h2>
+                        
+                        <p>Lorem Ipsum is simply dummy text of the 
+                            printing and typesetting industry. </p>
+                    </article>
+    
+                </div>
+    
+                <div class="col-12 col-md-4">
+                    <article class="footer-data">
+                        <i class="fas fa-user-shield"></i>
+                        <h2>Seguridad, de principio a fin</h2>
+                        <p>Lorem Ipsum is simply dummy text of the 
+                            printing and typesetting industry.</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+        <h4>Lorem Ipsum is simply dummy text of the 
+            printing and typesetting industry</h4>
+    </footer>
 </body>
 </html> 
