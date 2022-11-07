@@ -6,7 +6,7 @@
     <title>Carrito de compras</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         rel="stylesheet" />
-    <link rel="stylesheet" href="/css/registro.css">
+    <link rel="stylesheet" href="/css/carritoCompras.css">
     <link rel="icon" href="images/bellaVista.ico">
 </head>
 <body>
@@ -37,51 +37,104 @@
             </ul>
         </nav>
     </header>
+    <h3 class="title">Carrito de compras</h3>
     <main>
-       <p>
-        <strong>Cantidad: </strong>
-        <input
-          class="box"
-          type="number"
-          name="cantidad"
-          id="cantidad"
-          min="1"
-        />
-      </p>
-      <div class=>
-        <h2>Total a pagar </h2>
-        <div>
-          <div><strong> Subtotal: </strong></div>
-        </div>
-        <div>
-          <div>
-            <strong>Envío: </strong> <br>
-            <label>Calle:</label>
-            <input type="text" name="street" placeholder="Calle">
-            <label>Número:</label>
-            <input type="text" name="number" placeholder="Número">
-            <label>Provincia:</label>
-            <input type="text" name="province" placeholder="Provincia">
-            <label>Ciudad:</label>
-            <input type="text" name="city" placeholder="Ciudad">
-            <label>Departamento:</label>
-            <input type="text" name="apartment" placeholder="Departamento">
-            <label>Código Postal:</label>
-            <input type="text" name="zip_code" placeholder="Código Postal">
-            <div class="col-s-12 flex-box">
-            <div><strong> Total: </strong></div>
-              </div>
-              <form action="/" method="GET">
-                <button type="submit" id="finalizar">
-                    Finalizar Compra
-                  </button>
-                  <button type="submit" id="seguir"> Seguir comprando</button>
-                </form>
-            </div>
-                
-
-
+        <article class="productoCarrito">
+            <img src="images/destacado4.PNG" alt="Batidora" class="product_img">
+            <article class="main-article">
+                <p class="description">Batidora de mesa Smartlife 1000W</p>
+                <p class="price">$23.200</p>
+                <p class="cantidad">
+                    <strong>Cantidad: </strong>
+                    <input
+                      class="box"
+                      type="number"
+                      name="cantidad"
+                      id="cantidad"
+                      min="1"
+                    />
+                  </p>
+            </article>
+        </article>
+        <article class="productoCarrito">
+            <img src="images/destacado3.PNG" alt="Horno" class="product_img">
+            <article class="main-article">
+                <p class="description">Smartlife Horno eléctrico 40 lts</p>
+                <p class="price">$70.500</p>
+                <p class="cantidad">
+                    <strong>Cantidad: </strong>
+                    <input
+                      class="box"
+                      type="number"
+                      name="cantidad"
+                      id="cantidad"
+                      min="1"
+                    />
+                  </p>
+            </article>
+        </article>
+        <article class="productoCarrito">
+            <img src="images/destacado1.PNG" alt="Cocina" class="product_img">
+            <article class="main-article">
+                <p class="description">COCINA PROFESIONAL</p>
+                <p class="price">$230.000</p>
+                <p class="cantidad">
+                    <strong>Cantidad: </strong>
+                    <input
+                      class="box"
+                      type="number"
+                      name="cantidad"
+                      id="cantidad"
+                      min="1"
+                    />
+                  </p>
+            </article>
+        </article>
     </main>
-
+    <form class="botones-carrito" action="/" method="GET">
+        <button type="submit" id="finalizar">
+            Finalizar Compra
+          </button>
+          <button type="submit" id="seguir"> Seguir comprando</button>
+        </form>
 </body>
+
+<footer class="main-footer">
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-12 col-md-4">
+                <article class="footer-data">
+                    <i class="fas fa-credit-card"></i>
+                    <h2>Pagá con tarjeta o en efectivo</h2>
+                    <p>Lorem Ipsum is simply dummy text of the 
+                        printing and typesetting industry.</p>
+                </article>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <article class="footer-data">
+                    <i class="fas fa-gift"></i>
+                    <h2>Envío gratis desde $ 1.999</h2>
+                    
+                    <p>Lorem Ipsum is simply dummy text of the 
+                        printing and typesetting industry. </p>
+                </article>
+
+            </div>
+
+            <div class="col-12 col-md-4">
+                <article class="footer-data">
+                    <i class="fas fa-user-shield"></i>
+                    <h2>Seguridad, de principio a fin</h2>
+                    <p>Lorem Ipsum is simply dummy text of the 
+                        printing and typesetting industry.</p>
+                </article>
+            </div> 
+        </div>
+    </div>
+    <h4>Lorem Ipsum is simply dummy text of the 
+        printing and typesetting industry</h4>
+</footer>
 </html> 
