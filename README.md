@@ -15,3 +15,6 @@ https://ig.com.ar/
 https://www.lvequipamiento.com/
 https://moretti.com.ar/
 https://www.gastrofer.com.ar/
+
+
+Tablero de trabajo: https://trello.com/b/FjrTmfEP/gastronomiagrupo10
