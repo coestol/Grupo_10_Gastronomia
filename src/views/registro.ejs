@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/headRegistro') %>
+<body> 
+    
+    <%- include('partials/header') %>
+    
+    <main class="main">
+        <form action="/" method="GET" class="contForm">    
+            <br/>
+            <p><label for=""><strong>Nombre y apellido</strong></label></p>   
+            <p><input type="text" id="name" name="name" placeholder="Nombre y apellido"></p> 
+            <br/>
+            <p><label for=""><strong>Nombre de usuario</strong></label></p>   
+            <p><input type="text" id="username" name="username" placeholder="Nombre de usuario"></p> 
+            <br/>
+            <p><label for=""><strong>Email</strong></label></p>   
+            <p><input type="email" id="email" name="email" placeholder="E-mail"></p> 
+            <br/>
+            <p><label for=""><strong>Fecha de Nacimiento</strong></label></p>   
+            <p><input type="date" id="fechaDeNacimiento" name="fechaDeNacimiento"></p> 
+            <br/>
+            <p><label for=""><strong>Elegí tu contraseña</strong></label></p>   
+            <p><input type="password" id="contraseña" name="contraseña" placeholder="Elegí tu contraseña"></p>
+            <br/>
+            <p><label for=""><strong>Confirmá tu contraseña</strong></label></p>   
+            <p><input type="password" id="contraseña" name="contraseña" placeholder="Confirmá tu contraseña"></p>
+            <br/>
+            <p><button type="submit">Confirmar</button>
+            <button type="submit">Volver</button>
+            </p>
+        </form>
+    </main>
+    <%- include('partials/footer') %>
+</body>
+</html> 

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/headLogin') %>
+<body> 
+    
+    <%- include('partials/header') %>
+    
+    <main class="main">
+        <form action="/" method="GET" class="mainForm"> 
+            <br/>
+            <p><label for=""><strong>Nombre de usuario</strong></label></p>   
+            <br/>
+            <p><input type="text" name="username" id="username" placeholder="Nombre de usuario"></p>
+            <br/>
+            <p><label for=""><strong>Ingresá tu contraseña</strong></label></p>   
+            <br/>
+            <p><input type="password" name="contraseña" id="contraseña" placeholder="Ingresá tu contraseña"> 
+            <br/>
+            <br/>
+            <button type="submit">Iniciar Sesión</button>
+            </p>
+        </form>
+    </main>
+    <%- include('partials/footer') %>
+</body>
+</html> 

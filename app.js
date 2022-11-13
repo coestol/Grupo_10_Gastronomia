@@ -1,25 +1,23 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-app.use(express.static('public'));
+const mainRouter = require('./src/routers/mainRouter');
+const loginRouter = require('./src/routers/loginRouter');
+const registroRouter = require('./src/routers/registroRouter');
+const carritoRouter = require('./src/routers/carritoRouter');
+const detalleProductoRouter = require('./src/routers/detalleProductoRouter');
 
-let port = 3000;
+app.listen(3000, ()=>{
+    console.log('Servidor Levantadoo');
+    });
 
-app.listen(port, () => {
-    console.log("Levantando un servidor con Express");
-})
-app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, 'views/home.html' ));
-});
-app.get("/DetalleProducto", (req, res) => {
-    res.sendFile(path.join(__dirname, 'views/DetalleProducto.html' ));
-});
-app.get("/carritoCompras", (req, res) => {
-    res.sendFile(path.join(__dirname, 'views/carritoCompras.html' ));
-});
-app.get("/registro", (req, res) => {
-    res.sendFile(path.join(__dirname, 'views/registro.html' ));
-});
-app.get("/login", (req, res) => {
-    res.sendFile(path.join(__dirname, 'views/login.html' ));
-});
+app.use(express.static(path.join('public')));
+
+app.set('views', path.join(__dirname, './src/views'));
+app.set('view engine', 'ejs');
+
+app.use(mainRouter); 
+app.use(loginRouter); 
+app.use(registroRouter); 
+app.use(carritoRouter); 
+app.use(detalleProductoRouter);

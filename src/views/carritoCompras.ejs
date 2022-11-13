@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/headCarritoCompras') %>
+<body>
+    
+    <%- include('partials/header') %>
+
+    <h1 class="title">Carrito de compras</h1>
+    <main class="mainCarrito">
+      <% productos.forEach( producto => { %>
+        <article class="productoCarrito">
+          <img src="<%= producto.img %>" alt="<%= producto.nombre %>" class="product_img">
+          <article class="main-article">
+              <p class="description"><%= producto.nombre %></p>
+              <p class="price"><%= producto.precio %></p>
+              <p class="cantidad">
+                  <strong>Cantidad: </strong>
+                  <input
+                    class="box"
+                    type="number"
+                    name="cantidad"
+                    id="cantidad"
+                    min="1"
+                  />
+                </p>
+          </article>
+        </article>
+      <%})%>
+    </article>
+    </main>
+    <form class="botones-carrito" action="/" method="GET">
+        <button type="submit" id="finalizar">
+            Finalizar Compra
+          </button>
+          <button type="submit" id="seguir"> Seguir comprando</button>
+    </form>
+    <%- include('partials/footer') %>    
+</body>
+</html> 
