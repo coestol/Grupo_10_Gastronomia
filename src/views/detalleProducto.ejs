@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('partials/headDetalleProducto') %>
-<body>
-    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GBV - Detalle de Producto</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+            rel="stylesheet" />
+        <link rel="stylesheet" href="/css/detalleProducto.css">
+       
+    </head>
+
     <%- include('partials/header') %>
-    
+<body>
+        
     <main>
         <h1 class="nombre-producto"> <%= producto.nombre %> </h1>   
         <section class="producto">
-            <img src="/public/images/destacado2.PNG" alt="cocina" class="product_img">
+            <img src="/images/destacado1.PNG" alt="cocina" class="product_img">
         </section>
         <section>
             <p class="price"></p>
@@ -23,6 +31,8 @@
             <p><%= producto.descripcion %></p>
         </section>
     </main>
+
     <%- include('partials/footer') %>
+    
 </body>
 </html> 

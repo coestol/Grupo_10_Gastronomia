@@ -1,14 +1,14 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const mainRouter = require('./src/routers/mainRouter');
-const loginRouter = require('./src/routers/loginRouter');
-const registroRouter = require('./src/routers/registroRouter');
-const carritoRouter = require('./src/routers/carritoRouter');
-const detalleProductoRouter = require('./src/routers/detalleProductoRouter');
+const mainRouter = require('./src/routes/mainRouter');
+const loginRouter = require('./src/routes/loginRouter');
+const registroRouter = require('./src/routes/registroRouter');
+const carritoRouter = require('./src/routes/carritoRouter');
+const detalleProductoRouter = require('./src/routes/detalleProductoRouter');
 
 app.listen(3000, ()=>{
-    console.log('Servidor Levantadoo');
+    console.log('Servidor Levantado');
     });
 
 app.use(express.static(path.join('public')));
