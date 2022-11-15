@@ -35,11 +35,21 @@ let productos = [
     }
 ]
 
-const detalleProductoController = {
+const productoController = {
     detalleProducto: (req, res) => {
         let producto = productos[req.params.id];
         res.render('detalleProducto', {producto});
+    },
+
+    crear: (req, res) => {
+        res.render('crearProducto');
+    },
+    editar: (req, res) => {
+        res.render('editarProducto');
+    },
+    listar: (req, res) => {
+        res.render('listarProducto', {productos});
     }
 }
 
-module.exports = detalleProductoController;
+module.exports = productoController;
