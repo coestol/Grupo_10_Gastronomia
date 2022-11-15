@@ -70,17 +70,17 @@ let productos = [
 const productoController = {
     detalleProducto: (req, res) => {
         let producto = productos[req.params.id];
-        res.render('detalleProducto', {producto});
+        res.render('products/detalleProducto', {producto});
     },
 
     crear: (req, res) => {
-        res.render('crearProducto');
+        res.render('products/crearProducto');
     },
     editar: (req, res) => {
-        res.render('editarProducto');
+        res.render('products/editarProducto');
     },
     listar: (req, res) => {
-        res.render('listarProducto', {productos});
+        res.render('products/listarProducto', {productos});
     }
 }
 
