@@ -81,6 +81,13 @@ const productoController = {
     },
     listar: (req, res) => {
         res.render('products/listarProducto', {productos});
+    },
+    eliminar: (req, res) => {
+        res.render('products/eliminarProducto/:id');
+        let id = req.params.id;
+		let productDelete = products.filter(product => product.id != id);
+		fs.writeFileSync(productsFilePath, JSON.stringify(productDelete, null , ''));
+		res.redirect('/');
     }
 }
 
