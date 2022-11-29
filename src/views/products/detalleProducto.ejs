@@ -15,7 +15,7 @@
     <main>
         <h1 class="nombre-producto"> <%= producto.nombre %> </h1>   
         <section class="producto">
-            <img src="/images/destacado1.PNG" alt="cocina" class="product_img">
+            <img src="/<%= producto.imagen %>" alt="cocina" class="product_img">
         </section>
         <section>
             <p class="price"></p>
@@ -25,10 +25,19 @@
                 <button type="submit"> Agregar al carrito</button>   
             </form>
         </section>   
+        <section class="precio">
+            <h2> <strong> Precio:</strong></h2>
+            <p><%= producto.precio %></p>
+        </section>
         <section class="Descripcion">
             <h2> <strong> Descripcion del producto:</strong></h2>
             <p><%= producto.descripcion %></p>
         </section>
+
+        <form action="/productos/editar/<%=producto.id %>" class="action-button edit" >
+            <button type="submit"> Editar Producto</button>   
+        </form>
+
     </main>
 
     <%- include('../partials/footer') %>

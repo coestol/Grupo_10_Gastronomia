@@ -1,0 +1,75 @@
+[
+    {
+        "id": 1,
+        "nombre": "COCINA PROFESIONAL",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque arcu ex, rhoncus ac porttitor gravida, sagittis vel diam. Phasellus et nunc vitae urna lacinia tincidunt a et urna. Aliquam aliquam interdum nisl, in sagittis dolor dapibus a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam congue risus bibendum pulvinar imperdiet. Pellentesque suscipit tempor tortor quis sollicitudin. Aliquam ligula sapien, tempor et justo eu, venenatis malesuada massa. Aliquam semper scelerisque ante id mollis. Nunc non ante vehicula nisl volutpat euismod. Nam turpis nibh, ullamcorper in gravida vitae, feugiat ac lectus.",
+        "categoria": "Cocinas",
+        "imagen": "destacado1.PNG",
+        "precio": "$6.770",
+        "descuento": 40
+    },
+    {
+        "id": 2,
+        "nombre": "COCINA PROFESIONAL'",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque arcu ex, rhoncus ac porttitor gravida, sagittis vel diam. Phasellus et nunc vitae urna lacinia tincidunt a et urna. Aliquam aliquam interdum nisl, in sagittis dolor dapibus a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam congue risus bibendum pulvinar imperdiet. Pellentesque suscipit tempor tortor quis sollicitudin. Aliquam ligula sapien, tempor et justo eu, venenatis malesuada massa. Aliquam semper scelerisque ante id mollis. Nunc non ante vehicula nisl volutpat euismod. Nam turpis nibh, ullamcorper in gravida vitae, feugiat ac lectus.",
+        "categoria": "Cocinas",
+        "imagen": "images/destacado2.PNG",
+        "precio": "$230.000",
+        "descuento": 20
+    },
+    {
+        "id": 3,
+        "nombre": "Smartlife Horno eléctrico 40 lts" ,
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque arcu ex, rhoncus ac porttitor gravida, sagittis vel diam. Phasellus et nunc vitae urna lacinia tincidunt a et urna. Aliquam aliquam interdum nisl, in sagittis dolor dapibus a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam congue risus bibendum pulvinar imperdiet. Pellentesque suscipit tempor tortor quis sollicitudin. Aliquam ligula sapien, tempor et justo eu, venenatis malesuada massa. Aliquam semper scelerisque ante id mollis. Nunc non ante vehicula nisl volutpat euismod. Nam turpis nibh, ullamcorper in gravida vitae, feugiat ac lectus.",
+        "categoria": "Hornos",
+        "imagen": "images/destacado3.PNG",
+        "precio": "$70.500",
+        "descuento": 15
+    },
+    {
+        "id": 4,
+        "nombre": "Batidora de mesa Smartlife 1000W",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque arcu ex, rhoncus ac porttitor gravida, sagittis vel diam. Phasellus et nunc vitae urna lacinia tincidunt a et urna. Aliquam aliquam interdum nisl, in sagittis dolor dapibus a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam congue risus bibendum pulvinar imperdiet. Pellentesque suscipit tempor tortor quis sollicitudin. Aliquam ligula sapien, tempor et justo eu, venenatis malesuada massa. Aliquam semper scelerisque ante id mollis. Nunc non ante vehicula nisl volutpat euismod. Nam turpis nibh, ullamcorper in gravida vitae, feugiat ac lectus.",
+        "categoria": "Batidoras",
+        "imagen": "images/destacado4.PNG",
+        "precio": "$23.230",
+        "descuento": 5
+    },
+    {
+        "id": 5,
+        "nombre": "COCINA PROFESIONAL",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque arcu ex, rhoncus ac porttitor gravida, sagittis vel diam. Phasellus et nunc vitae urna lacinia tincidunt a et urna. Aliquam aliquam interdum nisl, in sagittis dolor dapibus a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam congue risus bibendum pulvinar imperdiet. Pellentesque suscipit tempor tortor quis sollicitudin. Aliquam ligula sapien, tempor et justo eu, venenatis malesuada massa. Aliquam semper scelerisque ante id mollis. Nunc non ante vehicula nisl volutpat euismod. Nam turpis nibh, ullamcorper in gravida vitae, feugiat ac lectus.",
+        "categoria": "Cocinas",
+        "imagen": "images/destacado1.PNG",
+        "precio": "$6.770",
+        "descuento": 40
+    },
+    {
+        "id": 6,
+        "nombre": "COCINA PROFESIONAL'",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque arcu ex, rhoncus ac porttitor gravida, sagittis vel diam. Phasellus et nunc vitae urna lacinia tincidunt a et urna. Aliquam aliquam interdum nisl, in sagittis dolor dapibus a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam congue risus bibendum pulvinar imperdiet. Pellentesque suscipit tempor tortor quis sollicitudin. Aliquam ligula sapien, tempor et justo eu, venenatis malesuada massa. Aliquam semper scelerisque ante id mollis. Nunc non ante vehicula nisl volutpat euismod. Nam turpis nibh, ullamcorper in gravida vitae, feugiat ac lectus.",
+        "categoria": "Cocinas",
+        "imagen": "images/destacado2.PNG",
+        "precio": "$230.000",
+        "descuento": 20
+    },
+    {
+        "id": 7,
+        "nombre": "Smartlife Horno eléctrico 40 lts" ,
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque arcu ex, rhoncus ac porttitor gravida, sagittis vel diam. Phasellus et nunc vitae urna lacinia tincidunt a et urna. Aliquam aliquam interdum nisl, in sagittis dolor dapibus a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam congue risus bibendum pulvinar imperdiet. Pellentesque suscipit tempor tortor quis sollicitudin. Aliquam ligula sapien, tempor et justo eu, venenatis malesuada massa. Aliquam semper scelerisque ante id mollis. Nunc non ante vehicula nisl volutpat euismod. Nam turpis nibh, ullamcorper in gravida vitae, feugiat ac lectus.",
+        "categoria": "Hornos",
+        "imagen": "images/destacado3.PNG",
+        "precio": "$70.500",
+        "descuento": 15
+    },
+    {
+        "id": 8,
+        "nombre": "Batidora de mesa Smartlife 1000W",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque arcu ex, rhoncus ac porttitor gravida, sagittis vel diam. Phasellus et nunc vitae urna lacinia tincidunt a et urna. Aliquam aliquam interdum nisl, in sagittis dolor dapibus a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam congue risus bibendum pulvinar imperdiet. Pellentesque suscipit tempor tortor quis sollicitudin. Aliquam ligula sapien, tempor et justo eu, venenatis malesuada massa. Aliquam semper scelerisque ante id mollis. Nunc non ante vehicula nisl volutpat euismod. Nam turpis nibh, ullamcorper in gravida vitae, feugiat ac lectus.",
+        "categoria": "Batidoras",
+        "imagen": "images/destacado4.PNG",
+        "precio": "$23.230",
+        "descuento": 5
+    }
+]
+

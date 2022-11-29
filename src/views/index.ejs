@@ -20,13 +20,15 @@
             <div class="products">
                 <% productos.forEach( producto => { %>
                     <article>
-                        <img src="/<%= producto.img %>" alt="Cocina" class="product_img">
-                        <div class="main-article">
-                            <i class="fas fa-truck"></i>
-                            <p class="price"><%= producto.precio %></p>
-                            <p class="discount"><%= producto.descuento %></p>
-                            <h4 class="description"><%= producto.nombre %></h4>
-                        </div>
+                        <a href="/DetalleProducto/<%= producto.id %>">
+                            <img src="/<%= producto.img %>" alt="Cocina" class="product_img">
+                            <div class="main-article">
+                                <i class="fas fa-truck"></i>
+                                <p class="price"><%= producto.precio %></p>
+                                <p class="discount"><%= producto.descuento %></p>
+                                <h4 class="description"><%= producto.nombre %></h4>
+                            </div>
+                    </a>
                     </article> 
                 <%})%>
             </div>
@@ -36,13 +38,15 @@
             <div class="products">
                 <% productos.forEach( producto => { %>
                     <article>
-                        <img src="/<%= producto.img %>" alt="Cocina" class="product_img">
-                        <div class="main-article">
-                            <i class="fas fa-truck"></i>
-                            <p class="price"><%= producto.precio %></p>
-                            <p class="discount"><%= producto.descuento %></p>
-                            <h4 class="description"><%= producto.nombre %></h4>
-                        </div>
+                        <a href="/DetalleProducto/<%= producto.id %>">
+                            <img src="/<%= producto.img %>" alt="Cocina" class="product_img">
+                            <div class="main-article">
+                                <i class="fas fa-truck"></i>
+                                <p class="price"><%= producto.precio %></p>
+                                <p class="discount"><%= producto.descuento %></p>
+                                <h4 class="description"><%= producto.nombre %></h4>
+                            </div>
+                        </a>
                     </article> 
                 <%})%>
             </div>
