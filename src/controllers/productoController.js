@@ -6,22 +6,40 @@ const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const productoController = {
     detalleProducto: (req, res) => {
-        let producto = productos[req.params.id];
+        let id = req.params.id;
+        let producto = productos.find(producto => producto.id == id);
         res.render('products/detalleProducto', {producto});
     },
-
-    crear: (req, res) => {
+    verProducto: (req, res) => {
         res.render('products/crearProducto');
     },
-    editar: (req, res) => {
-        let producto = productos[req.params.id];
+    crear: (req, res) => {
+        let nuevoProducto = {
+            "id": productos[productos.length-1]["id"]+1 ,
+            "nombre": req.body.nombre, // ver por que no lee el nombre
+            "precio": req.body.precio,
+            "descuento": req.body.descuento,
+            "categoria": req.body.categoria,
+            "descripcion": req.body.descripcion,
+            "imagen": productos.img,
+        }
+
+        console.log(req.body.nombre)
+        productos.push(nuevoProducto)
+        fs.writeFileSync(productsFilePath, JSON.stringify(productos,null,""))
+        res.redirect("/")
+    },
+
+    ver: (req, res) => {
+        let id = req.params.id;
+        let producto = productos.find(producto => producto.id == id);
         res.render('products/editarProducto',{producto});
     },
     listar: (req, res) => {
         res.render('products/listarProducto', {productos});
     },
-    actualizar: (req,res) => {
-        let producto = productos.find(producto => productos.id == req.params.id);
+    editar: (req,res) => {
+        let producto = productos.find(producto => producto.id == req.params.id);
         
         let productoEditado = {
             "id": producto.id,
@@ -34,14 +52,14 @@ const productoController = {
         };
         
         let productoAeditar = productos.map(producto => {
-            if (productoEditado.id  == producto.id)
+            if (producto.id == productoEditado.id )
             {
                 return producto = productoEditado
             } 
             return producto
         })
-        fs.writeFileSync(productsFilePath,JSON.stringify/(productoAeditar,null,'\-t'));
-        /*res.render('detalleProducto',{producto});*/
+        fs.writeFileSync(productsFilePath,JSON.stringify(productoAeditar,null,''));
+        res.redirect('/')
     },
 
     eliminar: (req, res) => {

@@ -13,10 +13,10 @@
     <%- include('../partials/header') %>
     
     <main class="main">
-        <form action="/" method="GET" class="contForm">    
+        <form action="/productos/crear" method="POST" class="contForm">    
             <br/>
             <p><label for=""><strong>Nombre del producto</strong></label></p>   
-            <p><input type="text" id="name" name="name" placeholder="Nombre del producto"></p> 
+            <p><input type="text" id='nombre' name="nombre" placeholder="Nombre del producto"></p> 
             <br/>
             <p><label for=""><strong>Descripción</strong></label></p>   
             <p><input type="text" id="descripcion" name="descripcion" placeholder="Descripción"></p> 
@@ -27,9 +27,9 @@
             <p><label for=""><strong>Categoría</strong></label></p>   
             <p><input type="text" id="categoria" name="categoria" placeholder="Categoría"></p> 
             <br/>
-            <p><label for=""><strong>Colores</strong></label></p>   
+            <!-- <p><label for=""><strong>Colores</strong></label></p>   
             <p><input type="text" id="colores" name="colores" placeholder="Colores"></p>
-            <br/>
+            <br/> -->
             <p><label for=""><strong>Precio</strong></label></p>   
             <p><input type="number" id="precio" name="precio" placeholder="Precio"></p>
             <br/>

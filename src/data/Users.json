@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "Nombre y apellido": "Alfonso Estol",
+        "Nombre de usuario": "Toto",
+        "Email": "Estolalofnso@gmail.com",
+        "Fecha de nacimiento": "13/09/1999",
+        "Contraseña": "Mercado123"
+    },
+    {
+        "id": 2,
+        "Nombre y apellido": "Emmanuel Gentile",
+        "Nombre de usuario": "Emma245",
+        "Email": "Emmagentile@gmail.com",
+        "Fecha de nacimiento": "25/09/1990",
+        "Contraseña": "Messi2022"
+    },
+    {
+        "id": 3,
+        "Nombre y apellido": "Matias Larrea",
+        "Nombre de usuario": "Matata",
+        "Email": "Larreamatias@gmail.com",
+        "Fecha de nacimiento": "16/04/1988",
+        "Contraseña": "Lunademiel"
+    },
+    {
+        "id": 4,
+        "Nombre y apellido": "Joaquin Pereyra",
+        "Nombre de usuario": "Joaco.pereyra",
+        "Email": "Pereyrajoaquin@gmail.com",
+        "Fecha de nacimiento": "05/10/2000",
+        "Contraseña": "Undefined"
+    }
+]
