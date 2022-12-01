@@ -49,6 +49,7 @@ const productoController = {
             "imagen": req.body.imagen,
             "precio": req.body.precio,
             "descuento": req.body.descuento,
+            "imagen": producto.imagen
         };
         
         let productoAeditar = productos.map(producto => {
