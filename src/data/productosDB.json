@@ -1,1 +1,54 @@
-[{"id":1,"nombre":"COCINA","descripcion":"Lorem","categoria":"Cocinas","precio":"10000.77"},{"id":3,"nombre":"atma","descripcion":"Lorem","categoria":"Hornos","precio":""},{"id":4,"nombre":"mesa","descripcion":"Lorem","categoria":"Batidoras","precio":"23.230"},{"id":5,"nombre":"COCIN","descripcion":"Lorem","categoria":"Cocinas","imagen":"images/destacado1.PNG","precio":"6.770"},{"id":6,"nombre":"COCINA PROFESIONAL'","descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque arcu ex, rhoncus ac porttitor gravida, sagittis vel diam. Phasellus et nunc vitae urna lacinia tincidunt a et urna. Aliquam aliquam interdum nisl, in sagittis dolor dapibus a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam congue risus bibendum pulvinar imperdiet. Pellentesque suscipit tempor tortor quis sollicitudin. Aliquam ligula sapien, tempor et justo eu, venenatis malesuada massa. Aliquam semper scelerisque ante id mollis. Nunc non ante vehicula nisl volutpat euismod. Nam turpis nibh, ullamcorper in gravida vitae, feugiat ac lectus.","categoria":"Cocinas","imagen":"images/destacado2.PNG","precio":"230.000","descuento":20},{"id":7,"nombre":"Smartlife Horno eléctrico 40 lts","descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque arcu ex, rhoncus ac porttitor gravida, sagittis vel diam. Phasellus et nunc vitae urna lacinia tincidunt a et urna. Aliquam aliquam interdum nisl, in sagittis dolor dapibus a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam congue risus bibendum pulvinar imperdiet. Pellentesque suscipit tempor tortor quis sollicitudin. Aliquam ligula sapien, tempor et justo eu, venenatis malesuada massa. Aliquam semper scelerisque ante id mollis. Nunc non ante vehicula nisl volutpat euismod. Nam turpis nibh, ullamcorper in gravida vitae, feugiat ac lectus.","categoria":"Hornos","imagen":"images/destacado3.PNG","precio":"70.500","descuento":15},{"id":8,"nombre":"Batidora de mesa Smartlife 1000W","descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque arcu ex, rhoncus ac porttitor gravida, sagittis vel diam. Phasellus et nunc vitae urna lacinia tincidunt a et urna. Aliquam aliquam interdum nisl, in sagittis dolor dapibus a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam congue risus bibendum pulvinar imperdiet. Pellentesque suscipit tempor tortor quis sollicitudin. Aliquam ligula sapien, tempor et justo eu, venenatis malesuada massa. Aliquam semper scelerisque ante id mollis. Nunc non ante vehicula nisl volutpat euismod. Nam turpis nibh, ullamcorper in gravida vitae, feugiat ac lectus.","categoria":"Batidoras","imagen":"images/destacado4.PNG","precio":"23.230","descuento":5},{"id":9,"nombre":"req.body.nombre,","precio":"req.body.precio","descuento":"req.body.descuento","categoria":"req.body.categoria","descripcion":"req.body.descripcion"},{"id":10,"nombre":"hola","precio":"","categoria":"","descripcion":""}]
+[
+    {
+        "id": 1,
+        "nombre": "Cocina industrial 4 hornallas",
+        "descripcion": "Puerta desmontable con manija de madera, bisagras irrompibles y pirómetro analógico. Gabinete 100% acero inoxidable esmerilado. Interior enlozado con piso de tejuelas refractarias. Mecheros de aluminio fundido. Aislación térmica con lana mineral.3 rejillas extraíbles de 70 x 51 cm. Bandeja antiderrame desmontable. Horno con válvula de seguridad.Kilocalorías/h. 25.000",
+        "categoria": "Cocinas",
+        "precio": "188.870",
+        "imagen": "images/cocinaindustrial4hornallas.png"
+    },
+    {
+        "id": 2,
+        "nombre": "Cocina industrial 6 hornallas",
+        "descripcion": "Puerta desmontable con manija de madera, bisagras irrompibles y pirómetro analógico. Gabinete 100% acero inoxidable esmerilado. Interior enlozado con piso de tejuelas refractarias. Mecheros de aluminio fundido.Aislación térmica con lana mineral. 3 rejillas extr. de 70 x 51 cm. Bandeja antiderrame desmontable. Horno con válvula de seguridad. Kilocalorías/h. 33.000",
+        "categoria": "Cocinas",
+        "precio": "200.198",
+        "imagen": "images/cocinaindustrial6hornallas.png"
+    },
+    {
+        "id": 3,
+        "nombre": "Smartlife Horno eléctrico 40 lts",
+        "descripcion": "Marca: SMARTLIFE. Modelo: SL-TOR060. 60lts de Capacidad Rotisserie. 6 funciones de cocción. Luz interior. Regulador de temperatura de 100°a 250°C. Temporizador hasta 60 minutos. 62x41x36cm –11kg. Incluye: Bandeja de alimentos, Manipulador de bandeja, Bandeja junta migas, Acc.para Spiedo y Manipulador Spiedo",
+        "categoria": "Hornos",
+        "imagen": "images/destacado3.PNG",
+        "precio": "33.999",
+        "descuento": 15
+    },
+    {
+        "id": 4,
+        "nombre": "Batidora de mesa Smartlife 1000W",
+        "descripcion": "Esta batidora industrial Smartlife SL-SB0037 es perfecta para preparar grandes cantidades de mezclas en pocos minutos. Se destaca por su potencia y capacidad de procesar ingredientes. Te permitirá acelerar la producción y aumentar la eficiencia del trabajo, ¡más preparaciones en menos tiempo!, La batidora Smartlife SL-SB0037 cuenta con soporte y bowl integrados que mantienen fijo el producto y facilitan su uso, ya que no es necesario estar pendiente de su funcionamiento. Ahorrá tiempo y ganá en resultados deliciosos. Además incluye 1 batidor de alambre fino, 1 batidor de gancho, 1 tapa anti salpicaduras, 1 batidor plano.",
+        "categoria": "Batidoras",
+        "imagen": "images/destacado4.PNG",
+        "precio": "29.230",
+        "descuento": 5
+    },
+    {
+        "id": 5,
+        "nombre": "Asador Mediano",
+        "descripcion": "Gabinete de acero inoxidable esmerilado con techo desmontable. 4 puertas de vidrio templado, brindando acceso por las 4 caras del equipo Sistema de cocción a gas natural o envasado a través de mecheros laterales y hornalla central con regulación de temperatura independiente     Válvulas de seguridad     4 ruedas para facilitar su traslado.     Bandeja inferior recolectora de grasa.     Sistema de ganchos portapollos colgados individuales para facilitar la carga y extracción.     Sin electricidad. Sin motores. Sin piezas móviles.",
+        "categoria": "Batidoras",
+        "imagen": "images/asadorcriollomediano.jpg",
+        "precio": "50.120",
+        "descuento": 5
+    },
+    {
+        "id": 6,
+        "nombre": "Horno 8 Pizzas con Carlitero Doble",
+        "descripcion": "Optimizá al maximo tus horneadas con este horno multifuncional! Gabinete 100% acero inoxidable esmerilado / Cámara de cocción enlozada con piso de tejuelas refractarias.- Carlitero doble inferior (Incluye 2 pinzas).- Puerta desmontable con manija de madera, bisagras irrompibles y pirómetro analógico.        - Incluye 3 rejillas extraíbles.",
+        "categoria": "Batidoras",
+        "imagen": "images/hornopizzero8.jpg",
+        "precio": "50.120",
+        "descuento": 5
+    }
+]

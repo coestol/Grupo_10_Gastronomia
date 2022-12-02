@@ -74,7 +74,6 @@ align-items: center;
     height: 224px;
     margin: 10px;
     padding: 2px; 
-  
 }
 
 main section article{
@@ -281,21 +280,18 @@ sub-footer {
     .site {
         display: flex;
         background-color: #D9D9D9;
-    }
-    .left-nabvar li{
-        margin-right: 25%;
-        background-color: #534E4E;
-        height: 80%;
-    }
-    .rigth-nabvar li{
-        background-color: #534E4E;
-        width: 100%;
-        margin-left: 20%;
-    }
+        justify-content: space-around;
+        }
     .site ul {
         display: flex;
-        margin: auto;
     }
+    .left-nabvar li{
+        margin: 5px;
+    }
+    .rigth-nabvar li{
+        margin: 5px;
+    }
+    
 }
 @media (min-width: 1200px) {
     section.banner img{
