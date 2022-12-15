@@ -21,7 +21,7 @@
                 <% productos.forEach( producto => { %>
                     <article>
                         <a href="/DetalleProducto/<%= producto.id %>">
-                            <img src="<%= producto.imagen %>" alt="Cocina" class="product_img">
+                            <img src="/images/<%= producto.imagen %>" alt="Cocina" class="product_img">
                             <div class="main-article">
                                 <i class="fas fa-truck"></i>
                                 <p class="price"><%= producto.precio %></p>
@@ -39,7 +39,7 @@
                 <% productos.forEach( producto => { %>
                     <article>
                         <a href="/DetalleProducto/<%= producto.id %>">
-                            <img src="<%= producto.imagen %>" alt="Cocina" class="product_img">
+                            <img src="/images/<%= producto.imagen %>" alt="Cocina" class="product_img">
                             <div class="main-article">
                                 <i class="fas fa-truck"></i>
                                 <p class="price"><%= producto.precio %></p>

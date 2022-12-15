@@ -14,6 +14,18 @@ const productoController = {
         res.render('products/crearProducto');
     },
     crear: (req, res) => {
+        
+        let img 
+      
+        if (req.files.length > 0)
+        {
+            img = req.files[0].filename
+            
+        }else
+        {
+            img = 'default.png'
+        }
+      
         let nuevoProducto = {
             "id": productos[productos.length-1]["id"]+1 ,
             "nombre": req.body.nombre, // ver por que no lee el nombre
@@ -21,7 +33,7 @@ const productoController = {
             "descuento": req.body.descuento,
             "categoria": req.body.categoria,
             "descripcion": req.body.descripcion,
-            "imagen": productos.img,
+            "imagen": img,
         }
 
         console.log(req.body.nombre)
