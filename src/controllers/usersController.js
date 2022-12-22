@@ -2,6 +2,7 @@ const path = require('path');
 const fs = require('fs');
 const usuariosFilePath = path.join(__dirname, '../data/Users.json');
 const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, 'utf-8'));
+const bcrypt = require("bcryptjs");
 
 const usersController = {
 
@@ -30,7 +31,7 @@ const usersController = {
             "Nombre": req.body.nombre, // ver por que no lee el nombre
             "Apellido": req.body.apellido,
             "Email": req.body.email,
-            "Contraseña": req.body.contraseña,
+            "Contraseña": bcrypt.hashSync(req.body.contrasenia,10),
             "Categoria": req.body.categoria,
             "Imagen": img,
         }
