@@ -10,29 +10,9 @@
         <link rel="stylesheet" href="/css/home.css">
         </head>
 <body>
-    <%- include('partials/header') %>
-    
-    <%- include('partials/banner') %>
+    <%- include('../partials/header') %>
 
     <main>
-        <section class="productos-destacados">
-            <h2>Productos Destacados</h2>
-            <div class="products">
-                <% productos.forEach( producto => { %>
-                    <article>
-                        <a href="/DetalleProducto/<%= producto.id %>">
-                            <img src="/images/productos/<%= producto.imagen %>" alt="Cocina" class="product_img">
-                            <div class="main-article">
-                                <i class="fas fa-truck"></i>
-                                <p class="price"><%= producto.precio %></p>
-                                <p class="discount"><%= producto.descuento %></p>
-                                <h4 class="description"><%= producto.nombre %></h4>
-                            </div>
-                    </a>
-                    </article> 
-                <%})%>
-            </div>
-        </section>
         <section class="productos-destacados">
             <h2>Productos en oferta</h2>
             <div class="products">
@@ -52,6 +32,6 @@
             </div>
         </section>
     </main>
-    <%- include('partials/footer') %>
+    <%- include('../partials/footer') %>
 </body>
 </html> 

@@ -1,43 +1,42 @@
-const path = require('path');
-const fs = require('fs');
-const usuariosFilePath = path.join(__dirname, '../data/Users.json');
-const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, 'utf-8'));
+const User = require('../models/User')
 const bcrypt = require("bcryptjs");
 
 const usersController = {
 
     registro: (req, res) => {
-        
         res.render('users/registro');
     },
     login: (req, res) => {
         res.render('users/login');
     },
-    crear: (req,res) => {
-        
-        let img 
-      
-        if (req.files.length > 0)
-        {
-            img = req.files[0].filename
-            
-        }else
-        {
-            img = 'default.png'
-        }
-      
-        let nuevoUsuario = {
-            "id": usuarios[usuarios.length-1]["id"]+1 ,
-            "Nombre": req.body.nombre, // ver por que no lee el nombre
-            "Apellido": req.body.apellido,
-            "Email": req.body.email,
-            "Contraseña": bcrypt.hashSync(req.body.contrasenia,10),
-            "Categoria": req.body.categoria,
-            "Imagen": img,
-        }
+    logout: (req, res) => {
+        res.clearCookie('emailUsuario')
+        req.session.destroy();
+        return res.redirect('/login')
+    },
+    procesoLogin: (req, res) => {        
+        let usuarioEnBase = User.findByCampo('Email', req.body.email)
 
-        usuarios.push(nuevoUsuario)
-        fs.writeFileSync(usuariosFilePath, JSON.stringify(usuarios,null,""))
+        if(usuarioEnBase) {
+            let contraseñaOk = bcrypt.compareSync(req.body.contrasenia, usuarioEnBase.Contraseña)
+            if(contraseñaOk) {
+                delete usuarioEnBase.Contraseña;
+                req.session.userLogged = usuarioEnBase;
+
+                if(req.body.remember == "on"){
+                    res.cookie('emailUsuario', req.body.email, {maxAge: 1000 * 60})
+                }
+                
+                return res.redirect('/')
+            } else {
+                res.send('Revise los datos')
+            }
+        } else {
+            res.send('Revise los datos')
+        }
+    },
+    crear: (req,res) => {
+        User.crearUsuario(req,res)
         res.redirect("/")
     }
 }

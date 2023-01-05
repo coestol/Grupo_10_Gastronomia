@@ -15,7 +15,7 @@ const productoController = {
     },
     crear: (req, res) => {
         
-        let img 
+        let img  
       
         if (req.files.length > 0)
         {
@@ -35,8 +35,6 @@ const productoController = {
             "descripcion": req.body.descripcion,
             "imagen": img,
         }
-
-        console.log(req.body.nombre)
         productos.push(nuevoProducto)
         fs.writeFileSync(productsFilePath, JSON.stringify(productos,null,""))
         res.redirect("/")
@@ -49,6 +47,9 @@ const productoController = {
     },
     listar: (req, res) => {
         res.render('products/listarProducto', {productos});
+    },
+    listarOfertas: (req, res) => {
+        res.render('products/listadoOfertas', {productos});
     },
     editar: (req,res) => {
         let producto = productos.find(producto => producto.id == req.params.id);

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
     <head>
         <meta charset="UTF-8">
@@ -19,7 +19,7 @@
                 <% productos.forEach( producto => { %>
                     <article>
                         <a href="/DetalleProducto/<%= producto.id %>">
-                        <img src="/images/<%= producto.imagen %>" alt="Cocina" class="product_img">
+                        <img src="/images/productos/<%= producto.imagen %>" alt="Cocina" class="product_img">
                         <div class="main-article">
                             <i class="fas fa-truck"></i>
                             <p class="price"><%= producto.precio %></p>

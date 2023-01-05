@@ -7,6 +7,16 @@ const carritoRouter = require('./src/routes/carritoRouter');
 const productoRouter = require('./src/routes/productoRouter');
 const methodOverride =  require('method-override'); //Para poder pisar el method="post" en el formulario por PUT y DELETE
 const bodyParser = require('body-parser');
+const session = require('express-session')
+const cookies= require('cookie-parser')
+
+
+app.use(session({
+    secret: 'secret word',
+    resave: false,
+    saveUninitialized: false
+}))
+app.use(cookies())
 
 app.use(bodyParser.urlencoded({ extended: false }))
 
