@@ -5,7 +5,7 @@ Este emprendimiento apunta tanto a los usuarios finales como a revendedores o re
 
 
 Descripcion integrantes:
-Conrado Alfonso Estol: Me dicen Alfonso, tengo 23 años, estudie analisis de datos en el ITBA.
+Conrado Alfonso Estol: Me dicen Toto, tengo 23 años, estudie analisis de datos en el ITBA.
 Emmanuel Gentile: Me dicen Emma, tengo 34 años, trabajo en Unilever y vivo en Tortuguitas, Zona Norte de Bs As.
 Larrea Suarez Matias: Me dicen mati, tengo 31 años, trabajo en red link y vivo en Berazategui, zona sur.
 
