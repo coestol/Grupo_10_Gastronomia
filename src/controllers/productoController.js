@@ -1,20 +1,22 @@
 const fs = require('fs');
 const path = require('path');
-
+const db = require('../database/models');
+//const productosDB = db.Product;
 const productsFilePath = path.join(__dirname, '../data/productosDB.json');
 const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const productoController = {
     detalleProducto: (req, res) => {
-        let id = req.params.id;
-        let producto = productos.find(producto => producto.id == id);
-        res.render('products/detalleProducto', {producto});
+        db.Product.findByPk(req.params.id)
+        .then(producto => {
+            res.render('products/detalleProducto', {producto});
+        })
     },
     verProducto: (req, res) => {
         res.render('products/crearProducto');
     },
     crear: (req, res) => {
-        
+
         let img  
       
         if (req.files.length > 0)
@@ -26,62 +28,50 @@ const productoController = {
             img = 'default.png'
         }
       
-        let nuevoProducto = {
-            "id": productos[productos.length-1]["id"]+1 ,
-            "nombre": req.body.nombre, // ver por que no lee el nombre
-            "precio": req.body.precio,
-            "descuento": req.body.descuento,
-            "categoria": req.body.categoria,
-            "descripcion": req.body.descripcion,
-            "imagen": img,
-        }
-        productos.push(nuevoProducto)
-        fs.writeFileSync(productsFilePath, JSON.stringify(productos,null,""))
+        db.Product.create({
+            "id_product": productos[productos.length-1]["id"]+4 ,
+            "name": req.body.nombre, // ver por que no lee el nombre
+            "description": req.body.descripcion,
+            "id_category": req.body.categoria,
+            "image": img,
+            "price": req.body.precio,
+            "id_brand": 1
+        })
         res.redirect("/")
     },
 
     ver: (req, res) => {
-        let id = req.params.id;
-        let producto = productos.find(producto => producto.id == id);
-        res.render('products/editarProducto',{producto});
+        db.Product.findByPk(req.params.id)
+        .then(producto => {
+            res.render('products/editarProducto',{producto});
+        })
     },
     listar: (req, res) => {
-        res.render('products/listarProducto', {productos});
+        db.Product.findAll()
+        .then(productos => {
+            res.render('products/listarProducto', {productos});
+        })
     },
     listarOfertas: (req, res) => {
-        res.render('products/listadoOfertas', {productos});
+        db.Product.findAll()
+        .then(productos => {
+            res.render('products/listadoOfertas', {productos});
+        })
     },
     editar: (req,res) => {
-        let producto = productos.find(producto => producto.id == req.params.id);
-        
-        let productoEditado = {
-            "id": producto.id,
-            "nombre": req.body.nombre,
-            "descripcion": req.body.descripcion,
-            "categoria": req.body.categoria,
-            "imagen": req.body.imagen,
-            "precio": req.body.precio,
-            "descuento": req.body.descuento,
-            "imagen": producto.imagen
-        };
-        
-        let productoAeditar = productos.map(producto => {
-            if (producto.id == productoEditado.id )
-            {
-                return producto = productoEditado
-            } 
-            return producto
-        })
-        fs.writeFileSync(productsFilePath,JSON.stringify(productoAeditar,null,''));
-        res.redirect('/')
-    },
 
-    eliminar: (req, res) => {
-        res.render('products/eliminarProducto/:id');
         let id = req.params.id;
-		let productDelete = products.filter(product => product.id != id);
-		fs.writeFileSync(productsFilePath, JSON.stringify(productDelete, null , ''));
-		res.redirect('/');
+
+        db.Product.update({
+            "name": req.body.nombre, // ver por que no lee el nombre
+            "description": req.body.descripcion,
+            "id_category": req.body.categoria,
+            "price": req.body.precio,
+        },
+        {
+            where: {id_product: id}
+        })
+        res.redirect('/')
     }
 }
 

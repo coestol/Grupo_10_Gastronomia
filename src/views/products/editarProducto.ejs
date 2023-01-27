@@ -15,22 +15,23 @@
     
     
     <main class="main">
-        <form action="/productos/editar/<%=producto.id%>?_method=PUT" method="POST" class="contForm">    
+        <form action="/productos/editar/<%=producto.id_product%>?_method=PUT" method="POST" class="contForm">    
             <br/>
-            <p><label for=""><strong>Estas editando: <%= producto.nombre %> </strong></label></p>   
-            <p><input type="text" name="nombre" value=<%= producto.nombre %> placeholder=<%= producto.nombre %>></p> 
+            <p><label for=""><strong>Estas editando: <%= producto.name %> </strong></label></p>   
+            <p><label for=""><strong>Nombre</strong></label></p> 
+            <p><input type="text" name="nombre" value=<%= producto.name %> placeholder=<%= producto.name %>></p> 
             <br/>
             <p><label for=""><strong>Descripción</strong></label></p>   
-            <p><input type="text"  name="descripcion" value=<%= producto.descripcion %> placeholder=<%= producto.descripcion %>></p> 
+            <p><input type="text"  name="descripcion" value=<%= producto.description %> placeholder=<%= producto.description %>></p> 
             <br/>
             <!--<p><label for=""><strong>Imagen</strong></label></p>   
             <p><input type="file" id="imagen" name="imagen" placeholder="Imagen"></p> 
             <br/>-->
             <p><label for=""><strong>Categoría</strong></label></p>   
-            <p><input type="text"  name="categoria" value=<%= producto.categoria %> placeholder=<%= producto.categoria %>></p> 
+            <p><input type="text"  name="categoria" value=<%= producto.id_category %> placeholder=<%= producto.id_category %>></p> 
             <br/>
             <p><label for=""><strong>Precio</strong></label></p>   
-            <p><input type="number"  name="precio" value=<%= producto.precio %> placeholder=<%= producto.precio %>></p>
+            <p><input type="number"  name="precio" value=<%= producto.price %> placeholder=<%= producto.price %>></p>
             <br/>
             <p><button type="submit">Confirmar</button>
             <button type="submit">Volver</button>

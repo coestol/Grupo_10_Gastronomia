@@ -7,7 +7,7 @@ const middlewareAuth = require('../../middlewares/middlewareAuth');
 router.get('/detalleProducto/:id/', middlewareAuth, productoController.detalleProducto);
 
 
-router.post('/productos/eliminar/:id/', middlewareAuth, productoController.eliminar);
+//router.post('/productos/eliminar/:id/', middlewareAuth, productoController.eliminar);
 
 /*---EDITAR PRODUCTOS---*/
 router.get('/productos/editar/:id/', middlewareAuth, productoController.ver);

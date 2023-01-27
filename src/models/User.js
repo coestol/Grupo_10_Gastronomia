@@ -28,7 +28,7 @@ const User = {
         return true
     },  
     crearUsuario: function (req, res) {
-        let usuarios = this.findAll();
+        let usuarios = this.findAll(); 
         let img 
       
         if (req.files.length > 0)

@@ -12,9 +12,9 @@
 <body>
         
     <main>
-        <h1 class="nombre-producto"> <%= producto.nombre %> </h1>   
+        <h1 class="nombre-producto"> <%= producto.name %> </h1>   
         <section class="producto">
-            <img src="/images/productos/<%= producto.imagen %>" alt="cocina" class="product_img">
+            <img src="/images/productos/<%= producto.image %>" alt="cocina" class="product_img">
         </section>
         <section>
             <p class="price"></p>
@@ -26,14 +26,14 @@
         </section>   
         <section class="precio">
             <h2> <strong> Precio:</strong></h2>
-            <p><%= producto.precio %></p>
+            <p>$<%= producto.price %></p>
         </section>
         <section class="Descripcion">
             <h2> <strong> Descripcion del producto:</strong></h2>
-            <p><%= producto.descripcion %></p>
+            <p><%= producto.description %></p>
         </section>
 
-        <form action="/productos/editar/<%=producto.id %>" class="action-button edit" >
+        <form action="/productos/editar/<%=producto.id_product%>" class="action-button edit" >
             <button type="submit"> Editar Producto</button>   
         </form>
 
