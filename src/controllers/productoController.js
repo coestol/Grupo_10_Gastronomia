@@ -1,9 +1,4 @@
-const fs = require('fs');
-const path = require('path');
-const db = require('../database/models');
-//const productosDB = db.Product;
-const productsFilePath = path.join(__dirname, '../data/productosDB.json');
-const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const db = require('../database/models'); 
 
 const productoController = {
     detalleProducto: (req, res) => {
@@ -16,34 +11,38 @@ const productoController = {
         res.render('products/crearProducto');
     },
     crear: (req, res) => {
-
-        let img  
+            let img  
       
-        if (req.files.length > 0)
-        {
-            img = req.files[0].filename
-            
-        }else
-        {
-            img = 'default.png'
-        }
-      
-        db.Product.create({
-            "id_product": productos[productos.length-1]["id"]+4 ,
-            "name": req.body.nombre, // ver por que no lee el nombre
-            "description": req.body.descripcion,
-            "id_category": req.body.categoria,
-            "image": img,
-            "price": req.body.precio,
-            "id_brand": 1
-        })
-        res.redirect("/")
+            if (req.files.length > 0)
+            {
+                img = req.files[0].filename
+                
+            }else
+            {
+                img = 'default.png'
+            }
+          
+            db.Product.create({
+                "name": req.body.nombre, // ver por que no lee el nombre
+                "description": req.body.descripcion,
+                "id_category": req.body.categoria,
+                "image": img,
+                "price": req.body.precio,
+                "id_brand": 1
+            })
+            res.redirect("/")
     },
 
     ver: (req, res) => {
         db.Product.findByPk(req.params.id)
         .then(producto => {
             res.render('products/editarProducto',{producto});
+        })
+    },
+    verEliminar: (req, res) => {
+        db.Product.findByPk(req.params.id)
+        .then(producto => {
+            res.render('products/eliminarProducto',{producto});
         })
     },
     listar: (req, res) => {
@@ -72,6 +71,16 @@ const productoController = {
             where: {id_product: id}
         })
         res.redirect('/')
+    },
+    eliminar: (req, res) => {
+        let id = req.params.id;
+
+        db.Product.destroy({
+            where: {id_product: id}
+        })
+
+        res.redirect('/')
+
     }
 }
 

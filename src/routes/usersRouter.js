@@ -6,11 +6,11 @@ const middlewareInvitado = require('../../middlewares/middlewareInvitado')
 
 
 /*-----Registro------*/
-router.get("/registro", middlewareInvitado, usersController.registro);
+router.get("/registro", usersController.registro);
 router.post("/registro", upload.any(''),usersController.crear)
 /*-----Login------*/
-router.get("/login", middlewareInvitado, usersController.login);
-router.post("/login", middlewareInvitado, usersController.procesoLogin);
+router.get("/login", usersController.login);
+router.post("/login", usersController.procesoLogin);
 
 /*-----Logout------*/
 router.get("/logout", usersController.logout);

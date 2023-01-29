@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GBV - Eliminacion Producto</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+            rel="stylesheet" />
+        <link rel="stylesheet" href="/css/registro.css">
+        <%- include('../partials/header') %>
+    </head>
+
+    <body>  
+    
+    
+    
+    <main class="main">
+        <form action="/productos/eliminar/<%=producto.id_product%>?_method=DELETE" method="POST" class="contForm">    
+            <br/>
+            <p><label for=""><strong>Estas eliminando el producto: <%= producto.name %> </strong></label></p>   
+            <br/>
+            <p><label for=""><strong>con descripcion: <%= producto.description %> </strong></label></p>   
+            <br/>
+            <p><label for=""><strong>con Id: <%= producto.id_product %> </strong></label></p>   
+            <br/>
+            <p><button type="submit">Eliminar</button>
+            <button type="submit">Volver</button>
+            </p>
+        </form>
+        <form action="/">
+            <button type="submit">Volver</button>
+        </form>
+    </main>
+    <%- include('../partials/footer') %>
+</body>
+</html> 

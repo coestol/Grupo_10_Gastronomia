@@ -6,8 +6,10 @@ const middlewareAuth = require('../../middlewares/middlewareAuth');
 
 router.get('/detalleProducto/:id/', middlewareAuth, productoController.detalleProducto);
 
+ 
+router.delete('/productos/eliminar/:id/', middlewareAuth, productoController.eliminar);
+router.get('/productos/eliminar/:id/', middlewareAuth, productoController.verEliminar);
 
-//router.post('/productos/eliminar/:id/', middlewareAuth, productoController.eliminar);
 
 /*---EDITAR PRODUCTOS---*/
 router.get('/productos/editar/:id/', middlewareAuth, productoController.ver);

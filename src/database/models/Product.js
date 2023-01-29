@@ -5,6 +5,7 @@ module.exports = (sequelize, Datatypes) => {
     let cols = {
         id_product: {//ver como poner que este es una FK
             type: Datatypes.INTEGER,
+            autoIncrement: true,
             primaryKey: true,
             allowNull: false
         },

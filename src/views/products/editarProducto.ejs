@@ -33,9 +33,12 @@
             <p><label for=""><strong>Precio</strong></label></p>   
             <p><input type="number"  name="precio" value=<%= producto.price %> placeholder=<%= producto.price %>></p>
             <br/>
-            <p><button type="submit">Confirmar</button>
-            <button type="submit">Volver</button>
+            <p>
+            <button type="button">Confirmar</button>
             </p>
+        </form>
+        <form action="/">
+            <button type="submit">Volver</button>
         </form>
     </main>
     <%- include('../partials/footer') %>

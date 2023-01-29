@@ -1,4 +1,3 @@
-const User = require('../src/models/User')
 
 function middlewareInvitado (req, res, next) {
     
