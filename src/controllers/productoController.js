@@ -50,9 +50,11 @@ const productoController = {
         .then(productos => {
             res.render('products/listarProducto', {productos});
         })
-    },
+    }, 
     listarOfertas: (req, res) => {
-        db.Product.findAll()
+        db.Product.findAll({
+            where: {id_category: 2}
+        })
         .then(productos => {
             res.render('products/listadoOfertas', {productos});
         })

@@ -1,9 +1,10 @@
+//const User = require('../src/models/User') 
 
 function middlewareInvitado (req, res, next) {
     
     if(!req.session.userLogged){
         let emailEnCookie = req.cookies.emailUsuario;
-        let usuarioEnBase = User.findByCampo('Email', emailEnCookie)
+        //let usuarioEnBase = User.findByCampo('Email', emailEnCookie)
 
         req.session.userLogged = usuarioEnBase
     } 

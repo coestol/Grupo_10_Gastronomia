@@ -1,13 +1,15 @@
-const fs = require('fs');
-const path = require('path');
 const db = require('../database/models');
 
 
 const mainController = {
     home: (req, res) => {
         db.Product.findAll()
-        .then(productos => {
-            res.render('index', {productos});
+        .then(products => {
+            let sales = products.filter(product => product.id_category === 2)
+            let featured = products.filter(product => product.id_category === 1)
+
+            res.render('index', {sales, featured});
+            //console.log()
         })
     }
 }

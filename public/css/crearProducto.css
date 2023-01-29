@@ -125,7 +125,7 @@ main form p input{
     text-align: center;
 }
 
-section.banner img{
+section.banner img{ 
     width: 100%;
 }
 
@@ -215,12 +215,17 @@ section.burger-menu{
 
 }
 @media (min-width: 1200px) {
-        .logo {
-        width: 10%;
-        height: 5%;
+    section.banner img{
+        padding: 3px 0px;
+        display: block;
+        width: 100%;
+        height: 25vh;
+        align-items: center;
+        justify-content: center;
     }
-    .main-header {
-        border: solid 1px blue;
+    .logo {
+        width: 5%;
+        height: 2%;
     }
     .header-top {
         background-color: #8A8383;
