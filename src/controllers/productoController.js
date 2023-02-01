@@ -25,7 +25,7 @@ const productoController = {
             db.Product.create({
                 "name": req.body.nombre, // ver por que no lee el nombre
                 "description": req.body.descripcion,
-                "id_category": req.body.categoria,
+                "id_category": 1,
                 "image": img,
                 "price": req.body.precio,
                 "id_brand": 1

@@ -56,7 +56,7 @@ const usersController = {
             "email": req.body.email,
             "password": req.body.contrasenia === req.body.contrasenia2 ? bcrypt.hashSync(req.body.contrasenia,10) :
             res.send('Las contraseñas deben coincidir'),
-            "id_category": req.body.categoria,
+            "id_category": 2,
             "image": img
         })
         res.redirect("/login")
