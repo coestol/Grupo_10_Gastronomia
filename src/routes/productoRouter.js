@@ -8,7 +8,7 @@ const {body} = require('express-validator');
 
 const validaciones = [
     body('nombre').notEmpty().withMessage('Ingrese un Nombre de producto').bail()
-    .isLength( { min: 5, max: 20 }).withMessage('Ingrese una Contraseña minimo 8 caracteres y maximo 20'),
+    .isLength( { min: 5, max: 20 }).withMessage('Ingrese nombre con minimo 8 caracteres y maximo 20'),
     body('descripcion').notEmpty().withMessage('Ingrese una descripcion de producto').bail()
     .isLength( { min: 20, max: 50 }).withMessage('Ingrese una Contraseña minimo 8 caracteres y maximo 50'),
     body('precio').notEmpty().withMessage('Ingrese un precio para el producto'),
