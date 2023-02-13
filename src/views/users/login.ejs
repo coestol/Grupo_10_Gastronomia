@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es"> 
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,30 +9,43 @@
         <link rel="stylesheet" href="/css/login.css">
     </head>
 
-<body> 
+<body class="body">  
     
     <%- include('../partials/headerSinLogin') %>
-     
-    <main class="main">
+    <br/>
+    
+    <main class="login-card">
+        
         <form action="/login" method="POST" class="mainForm"> 
-            <br/>
-            <p><label for=""><strong>Email de usuario</strong></label></p>   
-            <br/>
-            <p><input type="email" name="email" id="email" placeholder="Ingresá tu email"></p>
-            <br/>
-            <p><label for=""><strong>Ingresá tu contraseña</strong></label></p>   
-            <br/>
-            <p><input type="password" name="contrasenia" id="contrasenia" placeholder="Ingresá tu contraseña"> 
-            <br/>
-            <br/>
-            <button type="submit">Iniciar Sesión</button>
-            <br/>
-            <br/>
-            <label><input type="checkbox" name="remember" id="remember"> Recordar usuario</label><br>
-
-            </p>
+            <div class="card-header">
+                <div class="log">Login</div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email de usuario:</label>
+                <input value= "<%= locals.oldData ? oldData.email : null  %>" name="email" id="email" type="text">
+                <% if(locals.errors && errors.email) { %> 
+                    <div class="error"><%= errors.email.msg %></div>
+                <% } %> 
+            </div>
+            <div class="form-group">
+                <label for="">Contraseña de usuario:</label>
+                <input name="contrasenia" id="contrasenia" type="password">
+                <% if(locals.errors && errors.contrasenia) { %> 
+                    <div class="error"><%= errors.contrasenia.msg %></div>
+                <% } %> 
+              </div>
+            <div class="form-group">
+            <input value="Iniciar Sesión" type="submit">
+            </div>
+            <center>
+                <label><input type="checkbox" name="remember" id="remember"> Recordar usuario</label><br>
+            </center>
+            
         </form>
+
     </main>
 </body>
+<br/>
+    
 <%- include('../partials/footer') %>
 </html> 

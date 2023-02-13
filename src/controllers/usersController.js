@@ -1,12 +1,12 @@
 const bcrypt = require("bcryptjs");
 const db = require('../database/models');
-
+const {validationResult} = require('express-validator')
 const usersController = {
 
     registro: (req, res) => {
         res.render('users/registro');
     },
-    login: (req, res) => {
+    login: (req, res) => { 
         res.render('users/login');
     },
     logout: (req, res) => {
@@ -15,7 +15,15 @@ const usersController = {
         return res.redirect('/login')
     },
     procesoLogin: (req, res) => {        
+        const resultValidacion = validationResult(req)
 
+        if(resultValidacion.errors.length > 0){
+            return res.render('users/login', 
+            {
+                errors: resultValidacion.mapped(),
+                oldData: req.body
+            })
+        } 
         db.Users.findAll({
             where: {
                 email: req.body.email
@@ -39,25 +47,24 @@ const usersController = {
         
     },
     crear: (req, res) => {
-        let img 
-      
-        if (req.files.length > 0)
-        {
-            img = req.files[0].filename
-            
-        } else
-        { 
-            img = 'default.png'
+    
+        const resultValidacion = validationResult(req)
+
+        if(resultValidacion.errors.length > 0){
+            return res.render('users/registro', 
+            {
+                errors: resultValidacion.mapped(),
+                oldData: req.body
+            })
         }
-      
         db.Users.create({
             "name": req.body.nombre,
             "last_name": req.body.apellido,
             "email": req.body.email,
             "password": req.body.contrasenia === req.body.contrasenia2 ? bcrypt.hashSync(req.body.contrasenia,10) :
             res.send('Las contraseñas deben coincidir'),
-            "id_category": 2,
-            "image": img
+            "id_category": 1,
+            "image": req.file.filename
         })
         res.redirect("/login")
     }

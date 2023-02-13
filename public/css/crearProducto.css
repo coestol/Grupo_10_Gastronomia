@@ -165,6 +165,10 @@ section.banner img{
         color:white;
     }
 }
+.error {
+    font-size: 12px;
+    color: red;
+  }
 @media (min-width: 768px) {
 
     section.banner img{
@@ -212,6 +216,10 @@ section.burger-menu{
 .rigth-nabvar li{
     margin: 5px;
 }
+.error {
+    font-size: 12px;
+    color: red;
+  }
 
 }
 @media (min-width: 1200px) {
@@ -246,4 +254,8 @@ section.burger-menu{
     .site {
         display: flex;
     }
+    .error {
+        font-size: 12px;
+        color: red;
+      }
 }

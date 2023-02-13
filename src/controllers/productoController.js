@@ -1,4 +1,5 @@
 const db = require('../database/models'); 
+const {validationResult} = require('express-validator')
 
 const productoController = {
     detalleProducto: (req, res) => {
@@ -6,27 +7,26 @@ const productoController = {
         .then(producto => {
             res.render('products/detalleProducto', {producto});
         })
-    },
+    },  
     verProducto: (req, res) => {
         res.render('products/crearProducto');
     },
     crear: (req, res) => {
-            let img  
-      
-            if (req.files.length > 0)
-            {
-                img = req.files[0].filename
-                
-            }else
-            {
-                img = 'default.png'
-            }
+            const resultValidacion = validationResult(req)
+
+            if(resultValidacion.errors.length > 0){
+                return res.render('products/crearProducto', 
+                {
+                    errors: resultValidacion.mapped(),
+                    oldData: req.body
+                })
+            } 
           
             db.Product.create({
                 "name": req.body.nombre, // ver por que no lee el nombre
                 "description": req.body.descripcion,
                 "id_category": 1,
-                "image": img,
+                "image": req.file.filename,
                 "price": req.body.precio,
                 "id_brand": 1
             })

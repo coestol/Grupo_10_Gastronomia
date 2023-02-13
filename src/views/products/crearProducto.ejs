@@ -11,8 +11,8 @@
 <body> 
     
     <%- include('../partials/header') %>
-    
-    <main class="main">
+     
+    <main class="main"> 
     <form action="/productos/crear" method="POST" class="contenedorFormulario" enctype="multipart/form-data">    
     <br/>
     <h2>Completá la información de tu producto</h2>
@@ -21,18 +21,27 @@
             <div class="nombreYdescripcion">
                 <div class="campo">
                     <p><label for=""><strong>Nombre del producto</strong></label></p>   
-                    <p><input type="text" id='nombre' name="nombre" placeholder="Nombre del producto" class="input"></p> 
+                    <p><input type="text" id='nombre' name="nombre" class="input" value="<%= locals.oldData ? oldData.nombre : null  %>"></p> 
+                    <% if(locals.errors && errors.nombre) { %> 
+                        <div class="error"><%= errors.nombre.msg %></div>
+                    <% } %> 
                 </div>
                 <div class="campo">    
                     <p><label for=""><strong>Descripción</strong></label></p>   
-                    <p><input type="text" id="descripcion" name="descripcion" placeholder="Descripción" class="input"></p> 
+                    <p><input type="text" id="descripcion" name="descripcion" class="input" value="<%= locals.oldData ? oldData.descripcion : null  %>"></p> 
+                    <% if(locals.errors && errors.descripcion) { %> 
+                        <div class="error"><%= errors.descripcion.msg %></div>
+                    <% } %> 
                 </div>
             </div>
             
             <div class="precioYcategoria">
                 <div class="campo">
                     <p><label for=""><strong>Precio</strong></label></p>   
-                    <p><input type="number" id="precio" name="precio" placeholder="Precio" class="input"></p>
+                    <p><input type="number" id="precio" name="precio" class="input" value="<%= locals.oldData ? oldData.precio : null  %>"></p>
+                    <% if(locals.errors && errors.precio) { %> 
+                        <div class="error"><%= errors.precio.msg %></div>
+                    <% } %> 
                     <br/>
                 </div>
                 
@@ -41,11 +50,13 @@
         </div>
         <div class="campo">
                 <p><label for=""><strong>Imagen</strong></label></p>   
-                <p><input type="file" id="imagen" name="imagen" placeholder="Imagen" class="input"></p> 
+                <p><input type="file" id="imagen" name="imagen" class="input" value="<%= locals.oldData ? oldData.imagen : null  %>"></p> 
+                <% if(locals.errors && errors.imagen) { %> 
+                    <div class="error"><%= errors.imagen.msg %></div>
+                <% } %>    
                 <br/>                    
             </div>
             <p><button type="submit">Confirmar</button>
-            <button type="submit">Volver</button>
             </p>
     </form>
 

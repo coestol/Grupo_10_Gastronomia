@@ -4,6 +4,9 @@
     padding: 0px;
     box-sizing: border-box;
 }
+.body {
+    background-color: #8A8383;
+}
 .site ul { 
     list-style: none;
     margin: 0;
@@ -33,16 +36,11 @@
 .main-footer{
     background-color: orange;
     text-align: center;
-    height: 10%;
 }
 .container {
-
-    background-color: #8A8383;
-    padding: 20px 0;
+    background-color: #ccc;
+    padding: 1%;
     width: 100%;
-    height: 15%;
-    margin-top: 10px;
-    
 }
 .row{
     display: flex;
@@ -111,6 +109,69 @@ main form p input{
         padding:35%;
         color:white;
     }
+    .login-card {
+        width: 70%;
+        margin: auto;
+        padding: 4%;
+        border: 1px solid #ccc;
+        border-radius: 3%;
+        background-color: #e8e8e8;
+        box-shadow: 2px 2px 10px #ccc;
+      }
+      
+      .card-header {
+        text-align: center;
+        margin-bottom: 20px
+      }
+      
+      .card-header .log {
+        margin: 0;
+        font-size: 24px;
+        color: black;
+      }
+      .card-header .error {
+        font-size: 12px;
+        color: red;
+      }
+      
+      .form-group {
+        margin-bottom: 15px;
+      }
+      
+      label {
+        font-size: 18px;
+        margin-bottom: 5px;
+      }
+      
+      input[type="text"], input[type="password"] {
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        transition: 0.5s;
+      }
+      
+      input[type="submit"] {
+        width: 100%;
+        background-color: #333;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      
+      input[type="submit"]:hover {
+        background-color: #ccc;
+        color: black;
+      } 
+      .error {
+        font-size: 16px;
+        color: red;
+      }
 }
 @media (min-width: 768px) {
     .logo {
@@ -154,6 +215,69 @@ main form p input{
         display: flex;
         margin: auto;
     }
+    .login-card {
+        width: 70%;
+        margin: auto;
+        padding: 2%;
+        border: 1px solid #ccc;
+        border-radius: 3%;
+        background-color: #e8e8e8;
+        box-shadow: 2px 2px 10px #ccc;
+      }
+      
+      .card-header {
+        text-align: center;
+        margin-bottom: 20px
+      }
+      
+      .card-header .log {
+        margin: 0;
+        font-size: 24px;
+        color: black;
+      }
+      .card-header .error {
+        font-size: 20px;
+        color: red;
+      }
+      
+      .form-group {
+        margin-bottom: 15px;
+      }
+      
+      label {
+        font-size: 18px;
+        margin-bottom: 5px;
+      }
+      
+      input[type="text"], input[type="password"] {
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        transition: 0.5s;
+      }
+      
+      input[type="submit"] {
+        width: 100%;
+        background-color: #333;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      
+      input[type="submit"]:hover {
+        background-color: #ccc;
+        color: black;
+      } 
+      .error {
+        font-size: 16px;
+        color: red;
+      }
 }
 @media (min-width: 1200px) {
     section.banner img{
@@ -187,4 +311,63 @@ main form p input{
     .site {
         display: flex;
     }
+    .login-card {
+        width: 30%;
+        margin: auto;
+        padding: 1%;
+        border: 1px solid #ccc;
+        border-radius: 3%;
+        background-color: #e8e8e8;
+        box-shadow: 2px 2px 10px #ccc;
+      }
+      
+      .card-header {
+        text-align: center;
+        margin-bottom: 20px
+      }
+      
+      .card-header .log {
+        margin: 0;
+        font-size: 24px;
+        color: black;
+      }
+      
+      .form-group {
+        margin-bottom: 15px;
+      }
+      
+      label {
+        font-size: 18px;
+        margin-bottom: 5px;
+      }
+      
+      input[type="text"], input[type="password"] {
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        transition: 0.5s;
+      }
+      
+      input[type="submit"] {
+        width: 100%;
+        background-color: #333;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      
+      input[type="submit"]:hover {
+        background-color: #ccc;
+        color: black;
+      } 
+      .error {
+        font-size: 16px;
+        color: red;
+      }
 }
