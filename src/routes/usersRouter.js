@@ -62,6 +62,8 @@ const validacionesRegistro = [
         return true
     })
 ]
+// validaciones front
+
 /*-----Registro------*/
 router.get("/registro", usersController.registro);
 router.post("/registro", upload.single('imagen'), validacionesRegistro, usersController.crear)
