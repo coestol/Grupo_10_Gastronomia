@@ -12,32 +12,21 @@ const validacionesLogin = [
     .isEmail().withMessage('Ingrese un Email con formato valido'),
     body('contrasenia').notEmpty().withMessage('Ingrese una Contraseña')
 ]
-let hayUsuario = false;
 
 const validacionesRegistro = [
     body('email').notEmpty().withMessage('Ingrese un Email').bail()
     .isEmail().withMessage('Ingrese un Email con formato valido').bail()
-    .custom((value, {req}) => {
-        db.Users.findAll({
+    .custom(async value => {
+        let email = await db.Users.findOne({ 
             where: {
-                email: req.body.email
+                'email': value 
             }
-        })
-        .then((user) => {
-
-            if(user.length > 0) {
-                hayUsuario = true
-            } else {
-                hayUsuario = false
-            }
-        })
-        
-        if(hayUsuario){
-            throw new Error('Ya hay un usuario registrado con este Email')
+        });
+        if (email !== null) {
+        return Promise.reject();
         }
-
-    return true
-    }),
+    })
+    .withMessage('Ese nombre de usuario ya existe.'),
     body('contrasenia').notEmpty().withMessage('Ingrese una Contraseña')
     .isLength( { min: 8, max: 20 }).withMessage('Ingrese una Contraseña minimo 8 caracteres y maximo 20'),
     body('contrasenia2').notEmpty().withMessage('Ingrese una Contraseña')
