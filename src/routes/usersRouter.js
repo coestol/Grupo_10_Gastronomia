@@ -65,6 +65,9 @@ router.get("/logout", usersController.logout);
 
 
 
+/*-----API's------*/
+router.get("/api/users", usersController.apilistarusuarios);
+router.get("/api/users/:id", usersController.apiusuario);
 
-module.exports = router;  
 
+module.exports = router; 

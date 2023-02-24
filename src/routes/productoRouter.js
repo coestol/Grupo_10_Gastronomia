@@ -46,5 +46,11 @@ router.post('/productos/crear', upload.single('imagen'), validaciones, productoC
 router.get('/productos', middlewareAuth, productoController.listar);
 router.get('/ofertas', middlewareAuth, productoController.listarOfertas);
 
+/*---API PRODUCTOS---*/
+router.get('/api/products', productoController.apilistar);
+router.get('/api/products/:id', productoController.apiproducto);
+
+
+
 
 module.exports = router;
