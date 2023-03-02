@@ -32,14 +32,17 @@
             <h2> <strong> Descripcion del producto:</strong></h2>
             <p><%= producto.description %></p>
         </section>
+       
+        <% if(estaLogeado==1){ %>
+            <form action="/productos/editar/<%=producto.id_product%>" class="action-button edit" >
+                <button type="submit"> Editar Producto</button>   
+            </form>
+            <form action="/productos/eliminar/<%=producto.id_product%>"class="action-button edit" >
+                <button type="submit"> Eliminar Producto</button>   
+            </form>
+         <% } %>
+     </main>
 
-        <form action="/productos/editar/<%=producto.id_product%>" class="action-button edit" >
-            <button type="submit"> Editar Producto</button>   
-        </form>
-        <form action="/productos/eliminar/<%=producto.id_product%>"class="action-button edit" >
-            <button type="submit"> Eliminar Producto</button>   
-        </form>
-    </main>
     <form action="/">
         <button type="submit">Volver</button>
     </form>

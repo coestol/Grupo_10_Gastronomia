@@ -28,7 +28,7 @@ const validaciones = [
         return true
     })
 ]
-router.get('/detalleProducto/:id/', middlewareAuth, productoController.detalleProducto);
+router.get('/detalleProducto/:id/', productoController.detalleProducto);
 
  
 router.delete('/productos/eliminar/:id/', middlewareAuth, productoController.eliminar);
@@ -43,8 +43,8 @@ router.put('/productos/editar/:id/',middlewareAuth, productoController.editar);
 router.get('/productos/crear',middlewareAuth, productoController.verProducto);
 router.post('/productos/crear', upload.single('imagen'), validaciones, productoController.crear);
 
-router.get('/productos', middlewareAuth, productoController.listar);
-router.get('/ofertas', middlewareAuth, productoController.listarOfertas);
+router.get('/productos',  productoController.listar);
+router.get('/ofertas',  productoController.listarOfertas);
 
 /*---API PRODUCTOS---*/
 router.get('/api/products', productoController.apilistar);

@@ -3,9 +3,10 @@ const {validationResult} = require('express-validator')
 
 const productoController = {
     detalleProducto: (req, res) => {
+        let estaLogeado = req.session.userLogged ? req.session.userLogged.id_category : 0
         db.Product.findByPk(req.params.id)
         .then(producto => {
-            res.render('products/detalleProducto', {producto});
+            res.render('products/detalleProducto', {producto, estaLogeado});
         })
     },  
     verProducto: (req, res) => {
