@@ -31,7 +31,7 @@
                     <p><input type="text" id="descripcion" name="descripcion" class="input" value="<%= locals.oldData ? oldData.descripcion : null  %>"></p> 
                     <% if(locals.errors && errors.descripcion) { %> 
                         <div class="error"><%= errors.descripcion.msg %></div>
-                    <% } %> 
+                    <% } %>  
                 </div>
             </div>
             
@@ -56,7 +56,7 @@
                 <% } %>    
                 <br/>                    
             </div>
-            <p><button type="submit">Confirmar</button>
+            <input value="Confirma" type="submit">
             </p>
     </form>
 

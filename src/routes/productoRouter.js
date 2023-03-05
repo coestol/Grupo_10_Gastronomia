@@ -48,7 +48,10 @@ router.get('/ofertas',  productoController.listarOfertas);
 
 /*---API PRODUCTOS---*/
 router.get('/api/products', productoController.apilistar);
+router.get('/api/products/porcategoria/:id', productoController.apiproductosPorCat);
+router.get('/api/products/categorys', productoController.apiCategorys);
 router.get('/api/products/:id', productoController.apiproducto);
+
 
 
 

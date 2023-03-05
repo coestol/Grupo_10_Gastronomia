@@ -51,7 +51,7 @@ const productoController = {
         .then(productos => {
             res.render('products/listarProducto', {productos});
         })
-    }, 
+    },
     listarOfertas: (req, res) => {
         db.Product.findAll({
             where: {id_category: 2}
@@ -82,7 +82,7 @@ const productoController = {
             where: {id_product: id}
         })
 
-        res.redirect('/')
+        res.redirect('/') 
     },
     
     apilistar: (req, res) => {
@@ -104,7 +104,29 @@ const productoController = {
                 status: 200
             })
         })
-    }
+    },
+    apiproductosPorCat: (req, res) => {
+        db.Product.findAll({
+            where: {id_category: req.params.id}
+        })
+        .then(productos => {
+            return res.status(200).json({
+                count: productos.length,
+                countByCategory: 1,
+                productos: productos,
+                status: 200
+            })
+        })
+    },
+    apiCategorys: (req, res) => {
+        db.Product_category.findAll()
+        .then(categorias => {
+            return res.status(200).json({
+                data: categorias,
+                status: 200
+            })
+        })
+    }, 
 }
 
 module.exports = productoController;
