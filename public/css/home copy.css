@@ -1,4 +1,5 @@
 *{
+    font-size: '12px';
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -48,7 +49,6 @@ main section h2
     text-align: center;
     color: #8A8383;
     margin: 20px 0px;
-    font-size: 55px;
 }
 
 /*Contenedor de productos"*/
@@ -69,69 +69,36 @@ align-items: center;
 
 
 /*Tarjeta Productos*/
-.card {
-   
-    border-radius: 20px;
-    background: #f5f5f5;
-    position: relative;
-    padding: 1.8rem;
-    border: 2px solid #c3c6ce;
-    transition: 0.5s ease-out;
-    overflow: visible;
+
+main section article{
     background-image: url(https://img.freepik.com/free-photo/abstract-luxury-plain-blur-grey-black-gradient_1258-48264.jpg);
     margin: 15px;
     border-radius: 15%;
-
-    
-   }
-   
-   .card-details {
-    color: black;
-    height: 100%;
-    gap: .5em;
-    display: grid;
-    place-content: center;
-   }
-   
-   .card-button {
-    transform: translate(-50%, 125%);
-    width: 60%;
-    border-radius: 1rem;
-    border: none;
-    background-color: #008bf8;
-    color: #fff;
-    font-size: 1rem;
-    padding: .5rem 1rem;
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    opacity: 0;
-    transition: 0.3s ease-out;
-   }
-   
-   .text-body {
-    color: rgb(134, 134, 134);
-   }
-   
-   /*Text*/
-   .text-title {
-    font-size: 17px;
-    font-weight: bold;
-   }
-   
-   /*Hover*/
-   .card:hover {
-    border-color: #008bf8;
-    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
-   }
-   
-   .card:hover .card-button {
-    transform: translate(-50%, 50%);
-    opacity: 1;
-   }
   
+       
+}
+
+main section article div{
+    width: 95%;
+    text-align: center;
+    font-size: 100%;
+    color: rgb(78, 74, 74);
+    margin-bottom: 10px;
+    transition: all 300ms;
+     
+    
+
+}
+main section article:hover 
+{
+    opacity: 0.8;
+    transform: scale(1.20);
+    transition: all 150ms;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
    
-   
+   }
+
+
 
 /*Imagenes de los productos*/
 

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GBV - Detalle de Producto</title>
+    <!-- Stylesheet -->
+        <link rel="stylesheet" href="/css/detalleProducto.css">
+    <!---Boxicons CDN Setup for icons-->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<%- include('../partials/header') %>
+
+<body>
+    <div class="container">
+        <div class="single-product">
+            <div class="row">
+                <div class="col-6">
+                    <div class="product-image">
+                        <div class="product-image-main">
+                            <img src="/images/productos/<%= producto.image %>" alt="" id="product-main-image">
+                        </div>
+                        <div class="product-image-slider">
+                            <img src="/images/productos/<%= producto.image %>" alt=""  class="image-list">
+                            <img src="img/tshirt-2.png" alt=""  class="image-list">
+                            <img src="img/tshirt-3.png" alt=""  class="image-list">
+                            <img src="img/tshirt-group.png" alt=""  class="image-list">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <!---<div class="breadcrumb">
+                        <span><a href="#">Home</a></span>
+                        <span><a href="#">Product</a></span>
+                        <span class="active">T-shirt</span>
+                    </div>
+                    -->
+
+                    <div class="product">
+                        <div class="product-title">
+                            <h2><%= producto.name %></h2>
+                        </div>
+                        <!--
+                        <div class="product-rating">
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span class="review">(47 Review)</span>
+                        </div>
+                        -->
+                        <div class="product-price">
+                            <span class="offer-price">$<%= producto.price %></span>
+                        </div>
+
+                        <div class="product-details">
+                            <h3>Descripcion del producto:</h3>
+                            <p><%= producto.description %></p>
+                        </div>
+                        
+                        
+                        <span class="divider"></span>
+
+                        <div class="product-btn-group">
+                            <div class="button buy-now"><i class='bx bxs-zap' ></i> Comprar</div>
+                            <div class="button add-cart"><i class='bx bxs-cart' ></i>  <form action="/carritoCompras" method="get">
+                                <button type="submit"> Agregar al carrito</button>   
+                            </form></div>
+                            <% if(estaLogeado==1){ %>
+                                <form action="/productos/editar/<%=producto.id_product%>" class="action-button edit" >
+                                    <button type="submit"> Editar Producto</button>   
+                                </form>
+                                <form action="/productos/eliminar/<%=producto.id_product%>"class="action-button edit">
+                                    <button type="submit"> Eliminar Producto</button>   
+                                </form>
+                             <% } %>
+                       
+                       
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--script-->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bienvenido a Gastronomia Bella Vista</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+            rel="stylesheet" />
+        <link rel="stylesheet" href="/css/home.css">
+        </head>
+<body>
+    <%- include('partials/header') %>
+    
+    <%- include('partials/banner') %>
+
+    <main>
+        <section class="productos-destacados">
+            <h2>Productos Destacados</h2>
+            <div class="products">
+                <% featured.forEach( producto => { %>
+                    <article>
+                        <a href="/DetalleProducto/<%= producto.id_product %>">
+                            <img src="/images/productos/<%= producto.image %>" alt="Cocina" class="product_img">
+                            <div class="main-article">
+                                <i class="fas fa-truck"></i>
+                                <p class="price">$<%= producto.price %></p>
+                                <h4 class="description"><%= producto.name %></h4>
+                            </div>
+                        </a>
+                    </article> 
+                <%})%>
+            </div>
+        </section>
+
+
+        
+        <section class="productos-destacados">
+            <h2>Productos en oferta</h2>
+            <div class="products">
+                <% sales.forEach( producto => { %>
+                    <article>
+                        <a href="/DetalleProducto/<%= producto.id_product %>">
+                            <img src="/images/productos/<%= producto.image %>" alt="Cocina" class="product_img">
+                            <div class="main-article">
+                                <i class="fas fa-truck"></i>
+                                <p class="price">$<%= producto.price %></p>
+                                <h4 class="description"><%= producto.name %></h4>
+                            </div>
+                        </a>
+                    </article> 
+                <%})%>
+            </div>
+        </section>
+    </main>
+    <%- include('partials/footer') %>
+</body>
+</html> 

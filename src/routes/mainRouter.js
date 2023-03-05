@@ -4,6 +4,7 @@ const mainController = require('../controllers/mainController');
 
 
 router.get("/", mainController.home);
+router.get("/tarjeta", mainController.tarjeta);
 //router.get("/productos", productosController.product);
 
 

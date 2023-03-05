@@ -11,7 +11,10 @@ const mainController = {
             res.render('index', {sales, featured});
             //console.log()
         })
-    }
+    },
+    tarjeta: (req, res) => {
+        res.render('tarjeta');
+    },
 }
 
 module.exports = mainController;
