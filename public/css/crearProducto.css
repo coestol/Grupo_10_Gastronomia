@@ -19,7 +19,7 @@
 }
 
 .main {
-    background-color: #8A8383;
+    background-color: white;
     width: 80%;
     margin-top: 20px;
     margin-left: 10%;
@@ -32,16 +32,17 @@
 
 .contenedorFormulario h2{
 
-    color: black;
-    font-size: 24px;
+    color: #8A8383;
+    font-size: 55px;
     text-align: center;
+    
 }
 .campo{
     display: flex;
     flex-direction: column;
     margin: 10px;
     padding: 10px;
-    background-color: white;
+    background-color:  rgb(243, 240, 240);
     text-align: left;
     font-size: 18px;
     color: rgba(0,0,0,.6)
@@ -50,7 +51,7 @@
 
 .nombreYdescripcion{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-around
     
@@ -63,17 +64,40 @@
     justify-content: space-around
 }
 
-.input{
-    outline: 0;
-    border-width: 0 0 2px;
-    border-color: #8A8383;
-    font-style: italic;
+label {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"], input[type="password"] ,input[type="file"],input[type="number"]{
+    width: 100%;
+    padding: 12px 20px;
     font-size: 16px;
-    margin: 8px 0 4px;
-    padding: 0;
-    text-align: left;
-    
-}
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: 0.5s;
+  }
+  
+  input[type="submit"] {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #ccc;
+    color: black;
+  } 
+  .error {
+    font-size: 12px;
+    color: red;
+  }
 
 /*====== Footer ======*/
 

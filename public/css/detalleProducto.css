@@ -524,7 +524,13 @@ main{
     color: var(--grey);
     border-radius: 4px;
     cursor: pointer;
+       
 }
+
+button[type="submit"]{
+   border:0
+  }
+  
 .product-btn-group .add-cart i{
     font-size: 20px;
 }
