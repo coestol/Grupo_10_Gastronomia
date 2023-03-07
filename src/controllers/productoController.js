@@ -47,6 +47,7 @@ const productoController = {
         })
     },
     listar: (req, res) => {
+        
         db.Product.findAll()
         .then(productos => {
             res.render('products/listarProducto', {productos});

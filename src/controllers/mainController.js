@@ -3,6 +3,7 @@ const db = require('../database/models');
 
 const mainController = {
     home: (req, res) => {
+        let estaLogeado = req.session.userLogged ? req.session.userLogged.id_category : 0
         db.Product.findAll()
         .then(products => {
             let sales = products.filter(product => product.id_category === 2)

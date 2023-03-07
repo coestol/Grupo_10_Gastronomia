@@ -13,23 +13,27 @@
     <%- include('../partials/header') %>
 
     <main>
-        <section class="productos-destacados">
-            <h2>Productos en oferta</h2>
-            <div class="products">
-                <% productos.forEach( producto => { %> 
-                    <article>
+                <section class="productos-listado">
+            <h2>Listado de productos</h2>
+            
+                <div class="products">
+                    <% productos.forEach( producto => { %>
                         <a href="/DetalleProducto/<%= producto.id_product %>">
-                            <img src="/images/productos/<%= producto.image %>" alt="Cocina" class="product_img">
-                            <div class="main-article">
-                                <i class="fas fa-truck"></i>
-                                <p class="price">$<%= producto.price %></p>
-                                <h4 class="description"><%= producto.name %></h4>
+                        
+                        <div class="card">
+                            <div class="card-details">
+                                    <img src="/images/productos/<%= producto.image %>" alt="Cocina" class="product_img">
+                                    <p class="text-title"><%= producto.name %></p>
+                                    <p class="text-body">$<%= producto.price %></p>
                             </div>
+                            <button class="card-button">Detalles del producto</button>
+                        </div>
                         </a>
-                    </article> 
-                <%})%>
+                    <%})%>
+                </div>   
             </div>
         </section>
+        
     </main>
     <%- include('../partials/footer') %>
 </body>

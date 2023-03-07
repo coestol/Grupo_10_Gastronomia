@@ -12,40 +12,116 @@
 <body>
         
     <main>
-        <h1 class="nombre-producto"> <%= producto.name %> </h1>   
-        <section class="producto">
-            <img src="/images/productos/<%= producto.image %>" alt="cocina" class="product_img">
-        </section>
-        <section>
-            <p class="price"></p>
-        </section>
-        <section class="agregar-carrito">
-            <form action="/carritoCompras" method="get">
-                <button type="submit"> Agregar al carrito</button>   
-            </form>
-        </section>   
-        <section class="precio">
-            <h2> <strong> Precio:</strong></h2>
-            <p>$<%= producto.price %></p>
-        </section>
-        <section class="Descripcion">
-            <h2> <strong> Descripcion del producto:</strong></h2>
-            <p><%= producto.description %></p>
-        </section>
-       
-        <% if(estaLogeado==1){ %>
-            <form action="/productos/editar/<%=producto.id_product%>" class="action-button edit" >
-                <button type="submit"> Editar Producto</button>   
-            </form>
-            <form action="/productos/eliminar/<%=producto.id_product%>"class="action-button edit" >
-                <button type="submit"> Eliminar Producto</button>   
-            </form>
-         <% } %>
+         <div class="container">
+        <div class="single-product">
+            <div class="row1">
+                <div class="col-6">
+                    <div class="product-image">
+                        <div class="product-image-main">
+                            <img src="/images/productos/<%= producto.image %>" alt="" id="product-main-image">
+                        </div>
+                        <div class="product-image-slider">
+                            <img src="img/tshirt-1.png" alt=""  class="image-list">
+                            <img src="img/tshirt-2.png" alt=""  class="image-list">
+                            <img src="img/tshirt-3.png" alt=""  class="image-list">
+                            <img src="img/tshirt-group.png" alt=""  class="image-list">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                     <!--<div class="breadcrumb">
+                        <span><a href="#">Home</a></span>
+                        <span><a href="#">Product</a></span>
+                        <span class="active">T-shirt</span>
+                    </div>
+                -->
+
+                    <div class="product">
+                        <div class="product-title">
+                            <h2><%= producto.name %></h2>
+                        </div>
+                        <div class="product-rating">
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span class="review">(47 Review)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="offer-price"><%= "$"+producto.price*0.8 %></span>
+                            <span class="sale-price"><%= "$"+producto.price %></span>
+                        </div>
+
+                        <div class="product-details">
+                            <h3>Descripcion</h3>
+                            <p><%= producto.description %></p>
+                        </div>
+                        <!--<div class="product-size">
+                            <h4>Size</h4>
+                            <div class="size-layout">
+                                <input type="radio" name="size" value="S" id="1" class="size-input">
+                                <label for="1" class="size">S</label>
+
+                                <input type="radio" name="size" value="M" id="2" class="size-input">
+                                <label for="2" class="size">M</label>
+
+                                <input type="radio" name="size" value="L" id="3" class="size-input">
+                                <label for="3" class="size">L</label>
+
+                                <input type="radio" name="size" value="XL" id="4" class="size-input">
+                                <label for="4" class="size">XL</label>
+
+                                <input type="radio" name="size" value="XXL" id="5" class="size-input">
+                                <label for="5" class="size">XXL</label>
+                            </div>
+                        </div>
+                        
+                        <div class="product-color">
+                            <h4>Color</h4>
+                            <div class="color-layout">
+                                <input type="radio" name="color"  value="black" class="color-input">
+                                <label for="black" class="black"></label>
+                                <input type="radio" name="color"  value="red" class="color-input">
+                                <label for="red" class="red"></label>
+
+                                <input type="radio" name="color"  value="blue" class="color-input">
+                                <label for="blue" class="blue"></label>
+                            </div>
+                        </div>
+                        --->
+                        <span class="divider"></span>
+
+                        <div class="product-btn-group">
+                            <div class="button buy-now"><i class='bx bxs-zap' ></i>Comprar</div>
+                            <div class="button add-cart"><i class='bx bxs-cart' ></i> <form action="/carritoCompras" method="get">
+                                <button type="submit"> Agregar al carrito</button>   
+                            </form></div>
+                            <!-- <div class="button heart"><i class='bx bxs-heart' ></i> Add to Wishlist</div>-->
+                            <% if(estaLogeado==1){ %>
+                                <form class="button add-cart" action="/productos/editar/<%=producto.id_product%>" class="action-button edit" >
+                                    <button type="submit"> Editar Producto</button>   
+                                </form>
+                                <form class="button add-cart" action="/productos/eliminar/<%=producto.id_product%>"class="action-button edit" >
+                                    <button type="submit"> Eliminar Producto</button>   
+                                </form>
+                             <% } %>
+                             <form action="/" class="button add-cart">
+                                <button type="submit">Volver</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+    
+        </div>
+    
+    </div>
+    
      </main>
 
-    <form action="/">
-        <button type="submit">Volver</button>
-    </form>
+    
     <%- include('../partials/footer') %>
     
 </body>
